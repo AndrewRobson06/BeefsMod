@@ -36,8 +36,8 @@ namespace BeefsMod.Content.Items.Armor
 
         public override void UpdateEquip(Player player)
         {
-            player.GetCritChance(DamageClass.Ranged) += CritBonus;
-            player.GetDamage(DamageClass.Ranged) += DamageBonus / 100f; //20% increase damage
+            player.GetCritChance(DamageClass.Magic) += CritBonus;
+            player.GetDamage(DamageClass.Magic) += DamageBonus / 100f; //20% increase damage
             player.manaCost -= ManaCostReductionPercent / 100f;
             player.statManaMax2 += 100;
         }

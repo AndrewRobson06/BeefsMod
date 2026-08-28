@@ -36,7 +36,7 @@ namespace BeefsMod.Content.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.maxMinions += 1;
-            player.GetDamage(DamageClass.Ranged) += DamageBonus / 100f; //20% increase damage
+            player.GetDamage(DamageClass.Summon) += DamageBonus / 100f; //20% increase damage
         }
 
         public override void AddRecipes()

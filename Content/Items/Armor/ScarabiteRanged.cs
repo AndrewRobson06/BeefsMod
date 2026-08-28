@@ -1,5 +1,7 @@
-﻿using BeefsMod.Content.Tiles;
+﻿using BeefsMod.Content.Projectiles.Minions;
+using BeefsMod.Content.Tiles;
 using BeefsMod.Core.ModPlayers;
+using System.Numerics;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -28,8 +30,8 @@ namespace BeefsMod.Content.Items.Armor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Attacks inflict venom. Summons a scarab that fights for you";
-            player.GetModPlayer<ScarabiteSetBonus>().hasScarabite = true;
+            player.setBonus = "Attacks inflict venom";
+            player.GetModPlayer<ScarabiteSetBonus>().hasScarabite = true;     
         }
 
         public override void UpdateEquip(Player player)

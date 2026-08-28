@@ -11,8 +11,8 @@
 	<!-- References -->
 	<ItemGroup>
 	  <Folder Include="Assets\" />
-	  <Folder Include="Content\Buffs\" />
 	  <Folder Include="Content\Accessories\" />
+	  <Folder Include="Content\Buffs\" />
 	  <Folder Include="Content\Items\Materials\" />
 	  <Folder Include="Content\Weapons\Magic\Projectiles\" />
 	  <Folder Include="Content\Weapons\Ranged\Projectiles\" />

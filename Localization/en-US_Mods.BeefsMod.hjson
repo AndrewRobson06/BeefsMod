@@ -173,6 +173,7 @@ Projectiles: {
 	ShroomiteGrenadeProjectile.DisplayName: Shroomite Grenade Projectile
 	ShroomiteGrenadeSpore.DisplayName: Shroomite Grenade Spore
 	ScarabiteSwordProjectile.DisplayName: Scarabite Sword Projectile
+	ScarabiteMinion.DisplayName: Scarabite Minion
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

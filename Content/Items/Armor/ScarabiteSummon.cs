@@ -28,7 +28,7 @@ namespace BeefsMod.Content.Items.Armor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Attacks inflict venom. Summons a scarab that fights for you \nIncreases your max number of minions by 2";
+            player.setBonus = "Attacks inflict venom. Increases your max number of minions by 2";
             player.maxMinions += 2;
             player.GetModPlayer<ScarabiteSetBonus>().hasScarabite = true;
         }

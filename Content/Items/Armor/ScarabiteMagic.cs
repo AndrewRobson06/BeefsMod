@@ -30,7 +30,7 @@ namespace BeefsMod.Content.Items.Armor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Attacks inflict venom. Summons a scarab that fights for you";
+            player.setBonus = "Attacks inflict venom";
             player.GetModPlayer<ScarabiteSetBonus>().hasScarabite = true;
         }
 

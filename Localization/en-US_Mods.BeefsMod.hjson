@@ -162,6 +162,11 @@ Items: {
 		DisplayName: Scarabite Jaw
 		Tooltip: ""
 	}
+
+	ScarabiteJavelin: {
+		DisplayName: Scarabite Javelin
+		Tooltip: "Sticks into enemies for damage over time. More stick deals more damage"
+	}
 }
 
 Projectiles: {
@@ -181,7 +186,16 @@ Projectiles: {
 	ScarabiteMinion.DisplayName: Scarabite Minion
 	ScarabiteJawProjectile.DisplayName: Scarabite Jaw Projectile
 	ScarabiteJawSparkle.DisplayName: Scarabite Jaw Sparkle
+	VenomSludgeBall.DisplayName: Venom Sludge Ball
+	ScarabiteJavelinProjectile.DisplayName: Scarabite Javelin Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore
 WorldGen.ScarabiteOrePassMessage: Mods.BeefsMod.WorldGen.ScarabiteOrePassMessage
+
+Buffs: {
+	ScarabiteJavelinBuff: {
+		DisplayName: Scarabite Javelin Buff
+		Description: Mods.BeefsMod.Buffs.ScarabiteJavelinBuff.Description
+	}
+}

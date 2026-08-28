@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.GameContent.Tile_Entities;
 using Terraria.GameContent.UI.BigProgressBar;
@@ -112,6 +113,63 @@ namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
             }
         }
     }
+
+    /*public class VenomSludgeBall : ModProjectile
+    {
+        public override string Texture => "BeefsMod/Content/Weapons/Projectiles/Weapons/Melee/VenomSludgeBall";
+        public override void SetDefaults()
+        {
+            Projectile.width = 32;
+            Projectile.height = 32;
+            Projectile.friendly = true;
+            Projectile.penetrate = 2;
+            Projectile.tileCollide = true;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.ownerHitCheck = true;
+            Projectile.extraUpdates = 1;
+            Projectile.timeLeft = 300;
+
+            Projectile.aiStyle = ProjAIStyleID.;
+
+        }
+
+        public override void AI()
+        {
+            if (Main.rand.NextBool(2))
+            {
+                int d = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Venom);
+
+                Dust dust = Main.dust[d];
+
+                dust.noGravity = true;
+            }
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+
+            SoundEngine.PlaySound(Terraria.ID.SoundID.Item171, Projectile.position);
+            return true;
+        }
+
+        public override void PostDraw(Color lightColor)
+        {
+            Main.instance.LoadProjectile(540);
+            //Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
+            Texture2D bloomTex = TextureAssets.Projectile[540].Value;
+
+            //Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition, null, lightColor, 0, tex.Size() / 2f, Projectile.scale, 0f, 0f);
+
+            Main.spriteBatch.End();
+            Main.spriteBatch.Begin(default, BlendState.Additive, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
+            Main.spriteBatch.Draw(bloomTex, Projectile.Center - new Vector2(23, 0).RotatedBy(0) - Main.screenPosition,
+                null, new Color(152, 117, 233, 100), 0, bloomTex.Size() / 2f, 0.4f, 0f, 0f);
+
+            Main.spriteBatch.End();
+            Main.spriteBatch.Begin(default, default, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
+        }
+       
+    } */ //ill come back to this maybe
       
 }
 

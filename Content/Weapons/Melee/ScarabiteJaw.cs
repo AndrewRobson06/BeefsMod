@@ -38,7 +38,7 @@ namespace BeefsMod.Content.Weapons.Melee
 
             Item.shootSpeed = 3.7f;
             Item.shoot = ModContent.ProjectileType<ScarabiteJawProjectile>();
-            //Item.shoot = ModContent.ProjectileType<ScarabiteJawSparkle>();
+            //Item.shoot = ModContent.ProjectileType<VenomSludgeBall>();
         }
 
         public override bool CanUseItem(Player player)

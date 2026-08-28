@@ -42,7 +42,7 @@ namespace BeefsMod.Content.Items.Armor
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient<ScarabiteBarItem>(12)
+                .AddIngredient<ScarabiteBarItem>(13)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

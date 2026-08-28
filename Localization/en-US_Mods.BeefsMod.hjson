@@ -157,6 +157,11 @@ Items: {
 			20% increased summon damage
 			'''
 	}
+
+	ScarabiteJaw: {
+		DisplayName: Scarabite Jaw
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -174,6 +179,8 @@ Projectiles: {
 	ShroomiteGrenadeSpore.DisplayName: Shroomite Grenade Spore
 	ScarabiteSwordProjectile.DisplayName: Scarabite Sword Projectile
 	ScarabiteMinion.DisplayName: Scarabite Minion
+	ScarabiteJawProjectile.DisplayName: Scarabite Jaw Projectile
+	ScarabiteJawSparkle.DisplayName: Scarabite Jaw Sparkle
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

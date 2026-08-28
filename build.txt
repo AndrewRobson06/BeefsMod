@@ -1,0 +1,3 @@
+displayName = Beefs Mod
+author = Andson2
+version = 0.1

@@ -1,0 +1,179 @@
+Items: {
+	BloodlustSaber: {
+		DisplayName: Bleeding Edge
+		Tooltip:
+			'''
+			Draws a small about of blood as a projectile at the cost of your health
+			'Probably not smart to use this in hardcore...'
+			'''
+	}
+
+	VampireTooth: {
+		DisplayName: Vampire Tooth
+		Tooltip:
+			'''
+			Creates healing blood on critical hits
+			'Musta been a big ass vampire then'
+			'''
+	}
+
+	GemCutter: {
+		DisplayName: Gem Cutter
+		Tooltip: Ignores 10 points of enemy defence
+	}
+
+	HealingBlood: {
+		DisplayName: Healing Blood
+		Tooltip: ""
+	}
+
+	DiamondBladeStaff: {
+		DisplayName: Diamond Blade Staff
+		Tooltip: ""
+	}
+
+	CursedThrow: {
+		DisplayName: Cursed Throw
+		Tooltip: ""
+	}
+
+	GoldenSling: {
+		DisplayName: Golden Sling
+		Tooltip: ""
+	}
+
+	Boombranch: {
+		DisplayName: Boombranch
+		Tooltip: ""
+	}
+
+	ClusterGrenade: {
+		DisplayName: Cluster Grenade
+		Tooltip: ""
+	}
+
+	CrystalGrenade: {
+		DisplayName: Crystal Grenade
+		Tooltip: Explodes into damaging crystal shrapnel. Will not destroy tiles
+	}
+
+	CursedFlameGrenade: {
+		DisplayName: Cursed Flame Grenade
+		Tooltip: Explodes into cursed flame. Will not destroy tiles
+	}
+
+	IchorGrenade: {
+		DisplayName: Ichor Grenade
+		Tooltip: Explodes into ichor. Will not destroy tiles
+	}
+
+	CrimtaneBullet: {
+		DisplayName: Crimtane Bullet
+		Tooltip: ""
+	}
+
+	DemoniteBullet: {
+		DisplayName: Demonite Bullet
+		Tooltip: ""
+	}
+
+	HellfireBullet: {
+		DisplayName: Hellfire Bullet
+		Tooltip: ""
+	}
+
+	ShroomiteGrenade: {
+		DisplayName: Shroomite Grenade
+		Tooltip: Creates a massive explosion that does huge damage. Will not destory tiles
+	}
+
+	ScarabiteSword: {
+		DisplayName: Scarabite Sword
+		Tooltip: Inflicts venom on hit
+	}
+
+	ScarabiteOreItem: {
+		DisplayName: Scarabite Ore
+		Tooltip: ""
+	}
+
+	ScarabiteBarItem: {
+		DisplayName: Scarabite Bar
+		Tooltip: Shiny and slightly toxic
+	}
+
+	ScarabiteChest: {
+		DisplayName: Scarabite Breastplate
+		Tooltip:
+			'''
+			10% increased critical strike chance
+			7% increased movement speed
+			'''
+	}
+
+	ScarabiteLeg: {
+		DisplayName: Scarabite Leggings
+		Tooltip:
+			'''
+			12% increased critical strike chance
+			7% increased damage
+			'''
+	}
+
+	ScarabiteMelee: {
+		DisplayName: Scarabite Minitor Helm
+		Tooltip:
+			'''
+			20% increased melee damage
+			10% increased melee critical strike chance
+			'''
+	}
+
+	ScarabiteMagic: {
+		DisplayName: Scarabite Shorthorn Helm
+		Tooltip:
+			'''
+			Increased maximun mana by 100 and 19% reduced mana cost
+			20% increased magic damage
+			4% increased magic critical strike chance
+			'''
+	}
+
+	ScarabiteRanged: {
+		DisplayName: Scarabite Rhino Helm
+		Tooltip:
+			'''
+			20% increased ranged damage
+			4% increased magic critical strike chance
+			20% chance to save ammo
+			'''
+	}
+
+	ScarabiteSummon: {
+		DisplayName: Scarabite Cardinal Helm
+		Tooltip:
+			'''
+			Increases your max number of minions by 1
+			20% increased summon damage
+			'''
+	}
+}
+
+Projectiles: {
+	BloodlustSaberProjectile.DisplayName: Bloodlust Saber Projectile
+	VampireToothProjectile.DisplayName: Vampire Tooth Projectile
+	CursedFlameGrenadeProjectile.DisplayName: Cursed Flame Grenade Projectile
+	CursedFlameGrenadeExplosion.DisplayName: Cursed Flame Grenade Explosion
+	IchorGrenadeExplosion.DisplayName: Ichor Grenade Explosion
+	IchorGrenadeProjectile.DisplayName: Ichor Grenade Projectile
+	CrystalGrenadeExplosion.DisplayName: Crystal Grenade Explosion
+	CrystalGrenadeProjectile.DisplayName: Crystal Grenade Projectile
+	CrystalGrenadeSparkle.DisplayName: Crystal Grenade Sparkle
+	ShroomiteGrenadeExplosion.DisplayName: Shroomite Grenade Explosion
+	ShroomiteGrenadeProjectile.DisplayName: Shroomite Grenade Projectile
+	ShroomiteGrenadeSpore.DisplayName: Shroomite Grenade Spore
+	ScarabiteSwordProjectile.DisplayName: Scarabite Sword Projectile
+}
+
+Tiles.ScarabiteOre.MapEntry: Scarabite Ore
+WorldGen.ScarabiteOrePassMessage: Mods.BeefsMod.WorldGen.ScarabiteOrePassMessage

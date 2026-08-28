@@ -1,0 +1,11 @@
+# BeefsMod
+
+hi
+
+this is my Terraria Mod BeefsMod
+
+i like this game and wanted to make a mods for it and also maybe because there is a new found gap in terraira mods *cough* *cough*
+
+look at the code and sprites if you want, a lot of coding help was done with Example Mod and Colin_cs (king) modders blueprint videos on YouTube (https://www.youtube.com/@CollinDev)
+
+yeah thats about it

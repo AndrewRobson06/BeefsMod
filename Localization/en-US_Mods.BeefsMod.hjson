@@ -165,7 +165,7 @@ Items: {
 
 	ScarabiteJavelin: {
 		DisplayName: Scarabite Javelin
-		Tooltip: "Sticks into enemies for damage over time. More stick deals more damage"
+		Tooltip: Sticks into enemies for damage over time. More stick deals more damage
 	}
 }
 

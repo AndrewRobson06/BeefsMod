@@ -1,5 +1,4 @@
-﻿using BeefsMod.Content.Projectiles.Minions;
-using BeefsMod.Content.Tiles;
+﻿using BeefsMod.Content.Tiles;
 using BeefsMod.Core.ModPlayers;
 using System.Numerics;
 using Terraria;

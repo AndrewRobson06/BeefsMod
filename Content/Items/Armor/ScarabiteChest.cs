@@ -15,7 +15,7 @@ namespace BeefsMod.Content.Items.Armor
         {
             Item.width = 18;
             Item.height = 18;
-            Item.value = Item.sellPrice(gold: 1);
+            Item.value = Item.sellPrice(gold: 22, silver: 80);
             Item.rare = ItemRarityID.Yellow;
             Item.defense = 20;
         }

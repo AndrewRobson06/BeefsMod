@@ -49,7 +49,7 @@ namespace BeefsMod.Content.Tiles
             Item.DefaultToPlaceableTile(ModContent.TileType<ScarabiteBar>());
             Item.width = 20;
             Item.height = 20;
-            Item.value = 950;
+            Item.value = Item.sellPrice(silver: 95);
             Item.rare = ItemRarityID.Yellow;
         }
 

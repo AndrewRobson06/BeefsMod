@@ -23,7 +23,7 @@ namespace BeefsMod.Content.Weapons.Melee
         public override void SetDefaults()
         {
             Item.rare = ItemRarityID.Yellow;
-            Item.value = Item.sellPrice(gold: 5);
+            Item.value = Item.sellPrice(gold: 11, silver: 40);
 
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.useAnimation = 30;

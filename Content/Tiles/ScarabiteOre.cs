@@ -25,7 +25,7 @@ namespace BeefsMod.Content.Tiles
             {
                 Item.DefaultToPlaceableTile(ModContent.TileType<ScarabiteOre>());
                 Item.Size = new(12);
-                Item.value = 5000;
+                Item.value = Item.sellPrice(silver: 19);
                 Item.rare = ItemRarityID.Yellow;
 
             }

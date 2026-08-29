@@ -29,7 +29,7 @@ namespace BeefsMod.Content.Weapons.Melee
             Item.scale = 1f;
             Item.UseSound = SoundID.Item1;
             Item.rare = ItemRarityID.Yellow;
-            Item.value = Item.buyPrice(gold: 23); // Sell price is 5 times less than the buy price.
+            Item.value = Item.sellPrice(gold: 11, silver: 40); // Sell price is 5 times less than the buy price.
             Item.DamageType = DamageClass.Melee;
             Item.shoot = ModContent.ProjectileType<ScarabiteSwordProjectile>();
             Item.noMelee = true; // This is set the sword itself doesn't deal damage (only the projectile does).

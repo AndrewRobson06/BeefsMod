@@ -112,6 +112,11 @@ namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
                 Main.spriteBatch.Begin(default, default, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
             }
         }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.Venom, 420);
+        }
     }
 
     /*public class VenomSludgeBall : ModProjectile

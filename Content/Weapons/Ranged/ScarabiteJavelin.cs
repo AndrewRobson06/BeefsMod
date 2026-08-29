@@ -19,7 +19,7 @@ namespace BeefsMod.Content.Weapons.Ranged
         public override void SetDefaults()
         {
             Item.rare = ItemRarityID.Yellow;
-            Item.value = Item.sellPrice(silver: 5); //change later
+            Item.value = Item.sellPrice(copper: 28); //change later
             Item.maxStack = 9999;
 
             Item.useStyle = ItemUseStyleID.Swing;

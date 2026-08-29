@@ -160,7 +160,7 @@ Items: {
 
 	ScarabiteJaw: {
 		DisplayName: Scarabite Jaw
-		Tooltip: ""
+		Tooltip: Inflicts venom on hit
 	}
 
 	ScarabiteJavelin: {

@@ -144,7 +144,7 @@ Items: {
 		Tooltip:
 			'''
 			20% increased ranged damage
-			4% increased magic critical strike chance
+			4% increased ranged critical strike chance
 			20% chance to save ammo
 			'''
 	}
@@ -167,6 +167,35 @@ Items: {
 		DisplayName: Scarabite Javelin
 		Tooltip: Sticks into enemies for damage over time. More stick deals more damage
 	}
+
+	ScarabiteHammer: {
+		DisplayName: Scarabite Hammer
+		Tooltip: ""
+	}
+
+	ScarabitePickaxe: {
+		DisplayName: Scarabite Pickaxe
+		Tooltip: ""
+	}
+
+	ScarabiteWarAxe: {
+		DisplayName: Scarabite Waraxe
+		Tooltip: ""
+	}
+
+	ScarabiteDrill: {
+		DisplayName: Scarabite Drill
+		Tooltip: ""
+	}
+
+	FortuneHorseEars: {
+		DisplayName: Fortune Horse Ears
+		Tooltip:
+			'''
+			'Oho, what's this I see? Today's divination: great fortune!'
+			[c/FF9900:(Dedicated Item)]
+			'''
+	}
 }
 
 Projectiles: {
@@ -188,6 +217,7 @@ Projectiles: {
 	ScarabiteJawSparkle.DisplayName: Scarabite Jaw Sparkle
 	VenomSludgeBall.DisplayName: Venom Sludge Ball
 	ScarabiteJavelinProjectile.DisplayName: Scarabite Javelin Projectile
+	ScarabiteDrillProjectile.DisplayName: Scarabite Drill Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

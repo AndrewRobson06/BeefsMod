@@ -196,6 +196,15 @@ Items: {
 			[c/FF9900:(Dedicated Item)]
 			'''
 	}
+
+	CoolHorseEars: {
+		DisplayName: Cool Horse Ears
+		Tooltip: 
+			'''
+			'I've just gotta be the coolest to ever do it!'
+			[c/732e13:(Beef Item)]
+			'''
+	}
 }
 
 Projectiles: {

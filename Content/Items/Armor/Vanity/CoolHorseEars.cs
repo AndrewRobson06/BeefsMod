@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework;
 namespace BeefsMod.Content.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
-    public class FortuneHorseEars : ModItem
+    public class CoolHorseEars : ModItem
     {
         public override void SetDefaults()
         {
@@ -27,7 +27,8 @@ namespace BeefsMod.Content.Items.Armor.Vanity
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.CrystalBall)
+                .AddIngredient(ItemID.Ruby)
+                .AddIngredient(ItemID.Leather, 3)
                 .AddIngredient(ItemID.Silk, 10)
                 .AddTile(TileID.Loom)
                 .Register();

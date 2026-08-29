@@ -39,9 +39,9 @@ namespace BeefsMod.Core.GlobalNPCs
                 // Remember, lifeRegen affects the actual life loss, damage is just the text.
                 // The logic shown here matches how vanilla debuffs stack in terms of damage numbers shown and actual life loss.
                 npc.lifeRegen -= ScarabiteJavelinCount * 2 * 3;
-                if (damage < ScarabiteJavelinCount * 9)
+                if (damage < ScarabiteJavelinCount * 15)
                 {
-                    damage = ScarabiteJavelinCount * 9;
+                    damage = ScarabiteJavelinCount * 15;
                 }
             }
         }

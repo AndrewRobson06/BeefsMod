@@ -207,7 +207,7 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
             }
         }
 
-        private const int MaxStickingJavelin = 6; // This is the max amount of javelins able to be attached to a single NPC
+        private const int MaxStickingJavelin = 15; // This is the max amount of javelins able to be attached to a single NPC
         private readonly Point[] stickingJavelins = new Point[MaxStickingJavelin]; // The point array holding for sticking javelins
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)

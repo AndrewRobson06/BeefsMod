@@ -44,7 +44,7 @@ Items: {
 
 	Boombranch: {
 		DisplayName: Boombranch
-		Tooltip: ""
+		Tooltip: Fires in a two round burst
 	}
 
 	ClusterGrenade: {
@@ -79,7 +79,7 @@ Items: {
 
 	HellfireBullet: {
 		DisplayName: Hellfire Bullet
-		Tooltip: "Ignites enemies on hit"
+		Tooltip: Ignites enemies on hit
 	}
 
 	ShroomiteGrenade: {

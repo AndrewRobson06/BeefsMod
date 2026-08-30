@@ -39,7 +39,7 @@ Items: {
 
 	GoldenSling: {
 		DisplayName: Golden Sling
-		Tooltip: ""
+		Tooltip: Inflicts ichor on hit
 	}
 
 	Boombranch: {
@@ -228,6 +228,7 @@ Projectiles: {
 	ScarabiteJavelinProjectile.DisplayName: Scarabite Javelin Projectile
 	ScarabiteDrillProjectile.DisplayName: Scarabite Drill Projectile
 	CursedThrowProjectile.DisplayName: Cursed Throw Projectile
+	GoldenSlingProjectile.DisplayName: Golden Sling Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

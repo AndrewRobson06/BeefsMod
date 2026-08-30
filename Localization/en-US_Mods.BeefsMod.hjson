@@ -34,7 +34,7 @@ Items: {
 
 	CursedThrow: {
 		DisplayName: Cursed Throw
-		Tooltip: ""
+		Tooltip: Inflicts cursed flame on hit
 	}
 
 	GoldenSling: {
@@ -199,7 +199,7 @@ Items: {
 
 	CoolHorseEars: {
 		DisplayName: Cool Horse Ears
-		Tooltip: 
+		Tooltip:
 			'''
 			'I've just gotta be the coolest to ever do it!'
 			[c/732e13:(Beef Item)]
@@ -227,6 +227,7 @@ Projectiles: {
 	VenomSludgeBall.DisplayName: Venom Sludge Ball
 	ScarabiteJavelinProjectile.DisplayName: Scarabite Javelin Projectile
 	ScarabiteDrillProjectile.DisplayName: Scarabite Drill Projectile
+	CursedThrowProjectile.DisplayName: Cursed Throw Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

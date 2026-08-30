@@ -205,6 +205,24 @@ Items: {
 			[c/732e13:(Beef Item)]
 			'''
 	}
+
+	CouncilHorseEars: {
+		DisplayName: Empress Horse Ears
+		Tooltip:
+			'''
+			'Just as my esteemed mother once did, I must train to perfection and lead others along my path!'
+			[c/FF9900:(Dedicated Item)]
+			'''
+	}
+
+	ScienceHorseEars: {
+		DisplayName: Science Horse Ears
+		Tooltip:
+			'''
+			'Life is an experiment, and we its guinea pigs. You, me, the other horses, everyone!'
+			[c/FF9900:(Dedicated Item)]
+			'''
+	}
 }
 
 Projectiles: {

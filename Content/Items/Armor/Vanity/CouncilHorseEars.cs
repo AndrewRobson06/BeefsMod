@@ -27,10 +27,9 @@ namespace BeefsMod.Content.Items.Armor.Vanity
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.LadyBug)
-                .AddIngredient(ItemID.Daybloom, 3)
-                .AddIngredient(ItemID.Moonglow, 3)
-                .AddIngredient(ItemID.Silk, 10)
+                .AddIngredient(ItemID.YellowMarigold)
+                .AddIngredient(ItemID.SkyBlueFlower)
+                .AddIngredient(ItemID.Leather, 5)
                 .AddTile(TileID.Loom)
                 .Register();
         }

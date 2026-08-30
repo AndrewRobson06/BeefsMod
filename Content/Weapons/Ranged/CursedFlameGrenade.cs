@@ -153,7 +153,7 @@ namespace BeefsMod.Content.Weapons.Ranged
 
             Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
             Texture2D starTex = TextureAssets.Projectile[79].Value;
-            Texture2D bloomTex = TextureAssets.Projectile[549].Value;
+            Texture2D bloomTex = TextureAssets.Projectile[540].Value;
 
             Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition, null, lightColor, Projectile.rotation, tex.Size() / 2f, Projectile.scale, 0f, 0f);
 

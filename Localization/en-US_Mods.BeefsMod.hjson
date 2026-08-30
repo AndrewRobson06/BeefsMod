@@ -79,7 +79,7 @@ Items: {
 
 	HellfireBullet: {
 		DisplayName: Hellfire Bullet
-		Tooltip: ""
+		Tooltip: "Ignites enemies on hit"
 	}
 
 	ShroomiteGrenade: {
@@ -248,6 +248,8 @@ Projectiles: {
 	CursedThrowProjectile.DisplayName: Cursed Throw Projectile
 	GoldenSlingProjectile.DisplayName: Golden Sling Projectile
 	CrimtaneBulletProjectile.DisplayName: Crimtane Bullet Projectile
+	DemoniteBulletProjectile.DisplayName: Demonite Bullet Projectile
+	HellfireBulletProjectile.DisplayName: Hellfire Bullet Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

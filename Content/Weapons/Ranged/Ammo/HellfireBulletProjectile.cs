@@ -1,16 +1,17 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Terraria;
 using Terraria.Audio;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace BeefsMod.Content.Weapons.Ranged.Ammo
 {
-    public class CrimtaneBulletProjectile : ModProjectile
+    public class HellfireBulletProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -65,6 +66,11 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
             }
 
             return false;
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.OnFire, 420);
         }
     }
 }

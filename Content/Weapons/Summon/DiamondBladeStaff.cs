@@ -3,11 +3,82 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using System;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.ModLoader;
+using BeefsMod.Content.Projectiles.Minions;
+using BeefsMod.Content.Buffs;
+
 
 namespace BeefsMod.Content.Weapons.Summon
 {
-    internal class DiamondBladeStaff : ModItem
+    public class DiamondBladeStaff : ModItem
     {
+        public override void SetDefaults()
+        {
+            Item.damage = 2;
+            Item.knockBack = 0.5f;
+            Item.width = 46;
+            Item.height = 46;
+            Item.useTime = 36;
+            Item.useAnimation = 36;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.value = Item.sellPrice(gold: 1);
+            Item.rare = ItemRarityID.Blue;
+            Item.UseSound = SoundID.Item44;
+            Item.ArmorPenetration = 7;
+
+            Item.noMelee = true;
+            Item.DamageType = DamageClass.Summon;
+            Item.buffType = ModContent.BuffType<DiamondBladeStaffBuff>();
+            Item.shoot = ModContent.ProjectileType<DiamondBladeStaffMinion>();
+
+        }
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+        {
+            position = Main.MouseWorld;
+            player.LimitPointToPlayerReachableArea(ref position);
+        }
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            player.AddBuff(Item.buffType, 2);
+
+            return true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ItemID.Diamond, 5)
+                .AddIngredient(ItemID.GoldBar, 8)
+                .AddIngredient(ItemID.DemoniteBar, 3)
+                .AddTile(TileID.Anvils)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.Diamond, 5)
+                .AddIngredient(ItemID.GoldBar, 8)
+                .AddIngredient(ItemID.CrimtaneBar, 3)
+                .AddTile(TileID.Anvils)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.Diamond, 5)
+                .AddIngredient(ItemID.PlatinumBar, 8)
+                .AddIngredient(ItemID.DemoniteBar, 3)
+                .AddTile(TileID.Anvils)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.Diamond, 5)
+                .AddIngredient(ItemID.PlatinumBar, 8)
+                .AddIngredient(ItemID.CrimtaneBar, 3)
+                .AddTile(TileID.Anvils)
+                .Register();
+        }
     }
 }

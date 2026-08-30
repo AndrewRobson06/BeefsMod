@@ -29,7 +29,10 @@ Items: {
 
 	DiamondBladeStaff: {
 		DisplayName: Diamond Blade Staff
-		Tooltip: ""
+		Tooltip: '''
+				 Spawns a diamond to fight for you
+				 Ignores 7 points of enemy defence
+				 '''
 	}
 
 	CursedThrow: {
@@ -250,6 +253,7 @@ Projectiles: {
 	CrimtaneBulletProjectile.DisplayName: Crimtane Bullet Projectile
 	DemoniteBulletProjectile.DisplayName: Demonite Bullet Projectile
 	HellfireBulletProjectile.DisplayName: Hellfire Bullet Projectile
+	DiamondBladeStaffMinion.DisplayName: Diamond Blade Staff Minion
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore
@@ -259,5 +263,10 @@ Buffs: {
 	ScarabiteJavelinBuff: {
 		DisplayName: Scarabite Javelin Buff
 		Description: Mods.BeefsMod.Buffs.ScarabiteJavelinBuff.Description
+	}
+
+	DiamondBladeStaffBuff: {
+		DisplayName: Diamond Blade Staff Buff
+		Description: A friendly diamond is fighting for you!
 	}
 }

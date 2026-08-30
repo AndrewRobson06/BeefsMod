@@ -247,6 +247,7 @@ Projectiles: {
 	ScarabiteDrillProjectile.DisplayName: Scarabite Drill Projectile
 	CursedThrowProjectile.DisplayName: Cursed Throw Projectile
 	GoldenSlingProjectile.DisplayName: Golden Sling Projectile
+	CrimtaneBulletProjectile.DisplayName: Crimtane Bullet Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

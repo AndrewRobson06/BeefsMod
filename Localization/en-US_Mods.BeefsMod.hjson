@@ -29,10 +29,11 @@ Items: {
 
 	DiamondBladeStaff: {
 		DisplayName: Diamond Blade Staff
-		Tooltip: '''
-				 Spawns a diamond to fight for you
-				 Ignores 7 points of enemy defence
-				 '''
+		Tooltip:
+			'''
+			Spawns a diamond to fight for you
+			Ignores 5 points of enemy defence
+			'''
 	}
 
 	CursedThrow: {
@@ -266,7 +267,7 @@ Buffs: {
 	}
 
 	DiamondBladeStaffBuff: {
-		DisplayName: Diamond Blade Staff Buff
+		DisplayName: Diamond Protection
 		Description: A friendly diamond is fighting for you!
 	}
 }

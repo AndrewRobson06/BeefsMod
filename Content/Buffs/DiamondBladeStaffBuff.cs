@@ -19,7 +19,6 @@ namespace BeefsMod.Content.Buffs
         {
             Main.buffNoSave[Type] = true;
             Main.buffNoTimeDisplay[Type] = true;
-            //BuffID.Sets.BuffTextHandlers.Add(Type, new CachedProjectileCounterBuffTextHandler(ModContent.ProjectileType<DiamonBladeStaffMinion>()));
         }
 
         public override void Update(Player player, ref int buffIndex)

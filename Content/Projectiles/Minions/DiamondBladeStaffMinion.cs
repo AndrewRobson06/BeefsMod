@@ -124,7 +124,7 @@ namespace BeefsMod.Content.Projectiles.Minions
             }
             else
             {
-                float speed = 100f;
+                float speed = 300f;
                 if (speed < 1000f)
                     speed = MathHelper.Lerp(25f, 45f, distance / 1000f);
                 if (speed < 100f)

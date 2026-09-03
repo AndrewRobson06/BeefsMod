@@ -19,7 +19,7 @@ namespace BeefsMod.Content.Weapons.Summon
     {
         public override void SetDefaults()
         {
-            Item.damage = 10;
+            Item.damage = 6;
             Item.knockBack = 0.5f;
             Item.width = 46;
             Item.height = 46;

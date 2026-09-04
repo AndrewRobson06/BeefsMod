@@ -13,6 +13,7 @@
 	  <Folder Include="Assets\" />
 	  <Folder Include="Content\Accessories\" />
 	  <Folder Include="Content\Items\Materials\" />
+	  <Folder Include="Content\NPCs\" />
 	  <Folder Include="Content\Weapons\Magic\Projectiles\" />
 	  <Folder Include="Content\Dust\" />
 	</ItemGroup>

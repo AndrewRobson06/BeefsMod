@@ -227,6 +227,11 @@ Items: {
 			[c/FF9900:(Dedicated Item)]
 			'''
 	}
+
+	TheCannonBall: {
+		DisplayName: The Cannon Ball
+		Tooltip: Deals increased damage every six hits
+	}
 }
 
 Projectiles: {
@@ -255,6 +260,8 @@ Projectiles: {
 	DemoniteBulletProjectile.DisplayName: Demonite Bullet Projectile
 	HellfireBulletProjectile.DisplayName: Hellfire Bullet Projectile
 	DiamondBladeStaffMinion.DisplayName: Diamond Blade Staff Minion
+	TheCannonBallExplode.DisplayName: The Cannon Ball Explode
+	TheCannonBallProjectile.DisplayName: The Cannon Ball Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

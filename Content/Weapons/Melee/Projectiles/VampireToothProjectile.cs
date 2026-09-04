@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
+namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
     public class VampireToothProjectile : ModProjectile
     {

@@ -1,5 +1,5 @@
 ﻿using BeefsMod.Content.Tiles;
-using BeefsMod.Content.Weapons.Projectiles.Weapons.Melee;
+using BeefsMod.Content.Weapons.Melee.Projectiles;
 using BeefsMod.Content.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;

@@ -1,9 +1,9 @@
-﻿using BeefsMod.Content.Weapons.Projectiles.Weapons.Melee;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.DataStructures;
+using BeefsMod.Content.Weapons.Melee.Projectiles;
 
 namespace BeefsMod.Content.Weapons.Melee
 {

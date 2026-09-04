@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using BeefsMod.Content.Weapons.Melee;
 
-namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
+namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
     public class BloodlustSaberProjectile : ModProjectile
     {

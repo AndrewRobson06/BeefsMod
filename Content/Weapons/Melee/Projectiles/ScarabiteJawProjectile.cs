@@ -9,7 +9,7 @@ using Terraria.GameContent.UI.BigProgressBar;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
+namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
     public class ScarabiteJawProjectile : ModProjectile
     {

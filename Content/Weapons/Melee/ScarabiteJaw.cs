@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using BeefsMod.Content.Tiles;
-using BeefsMod.Content.Weapons.Projectiles.Weapons.Melee;
+using BeefsMod.Content.Weapons.Melee.Projectiles;
 
 namespace BeefsMod.Content.Weapons.Melee
 {

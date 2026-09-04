@@ -10,9 +10,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
+namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
-    public class CursedThrowProjectile : ModProjectile
+    public class GoldenSlingProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
@@ -38,10 +38,9 @@ namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
         public override void PostAI()
         {
             if (Main.rand.NextBool(5))
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.CursedTorch);
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.IchorTorch);
 
         }
-
         public override void PostDraw(Color lightColor)
         {
             Main.instance.LoadProjectile(540);
@@ -51,13 +50,12 @@ namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
             Main.spriteBatch.Begin(default, BlendState.Additive, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
 
             Main.spriteBatch.Draw(bloomTex, Projectile.Center - new Vector2(0, 0).RotatedBy(0) - Main.screenPosition,
-                   null, new Color(55, 200, 26, 150), 0, bloomTex.Size() / 2f, 0.4f, 0f, 0f);
+                   null, new Color(255, 179, 0, 150), 0, bloomTex.Size() / 2f, 0.4f, 0f, 0f);
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(BuffID.CursedInferno, 420);
+            target.AddBuff(BuffID.Ichor, 420);
         }
     }
-
 }

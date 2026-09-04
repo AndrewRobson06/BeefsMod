@@ -1,4 +1,4 @@
-﻿using BeefsMod.Content.Weapons.Projectiles.Weapons.Melee;
+﻿using BeefsMod.Content.Weapons.Melee.Projectiles;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;

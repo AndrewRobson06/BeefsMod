@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static BeefsMod.Content.Weapons.Ranged.CrystalGrenadeProjectile;
 
-namespace BeefsMod.Content.Weapons.Projectiles.Weapons.Melee
+namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
    
     public class TheCannonBallProjectile : ModProjectile

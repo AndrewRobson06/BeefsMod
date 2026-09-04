@@ -44,6 +44,9 @@ namespace BeefsMod.Core.GlobalNPCs
             if (npc.type == NPCID.PirateShip)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheCannonBall>(), 10, 1, 1));
 
+            if (npc.type == NPCID.Pumpking)
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PumpkinHarvester>(), 35, 1, 1));
+
 
         }
     }

@@ -232,6 +232,16 @@ Items: {
 		DisplayName: The Cannon Ball
 		Tooltip: Deals increased damage every six hits
 	}
+
+	PumpkinHarvester: {
+		DisplayName: Pumpkin Harvester
+		Tooltip: Swings a massive scythe that inflicts hell fire and shadowflame
+	}
+
+	OLDPumpkinHarvester: {
+		DisplayName: O L D Pumpkin Harvester
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -262,6 +272,7 @@ Projectiles: {
 	DiamondBladeStaffMinion.DisplayName: Diamond Blade Staff Minion
 	TheCannonBallExplode.DisplayName: The Cannon Ball Explode
 	TheCannonBallProjectile.DisplayName: The Cannon Ball Projectile
+	PumpkinHarvesterProjectile.DisplayName: Pumpkin Harvester Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

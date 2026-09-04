@@ -289,3 +289,9 @@ Buffs: {
 		Description: A friendly diamond is fighting for you!
 	}
 }
+
+NPCs: {
+	ForbiddenCentipedeBody.DisplayName: Forbidden Centipede Body
+	ForbiddenCentipedeHead.DisplayName: Forbidden Centipede Head
+	ForbiddenCentipedeTail.DisplayName: Forbidden Centipede Tail
+}

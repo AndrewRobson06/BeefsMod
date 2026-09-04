@@ -22,7 +22,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
         private const float FIRSTHALFSWING = 0.45f; // How much of the swing happens before it reaches the target angle (in relation to swingRange)
         private const float SPINRANGE = 4.5f * (float)Math.PI; // The angle a spin attack covers (630 degrees)
         private const float WINDUP = 0.15f; // How far back the player's hand goes when winding their attack (in relation to swingRange)
-        private const float UNWIND = 0.4f; // When should the sword start disappearing
+        private const float UNWIND = 0.6f; // When should the sword start disappearing
         private const float SPINTIME = 2.5f; // How much longer a spin is than a swing
 
         private enum AttackType // Which attack is being performed
@@ -85,7 +85,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             Projectile.localNPCHitCooldown = -1; // We set this to -1 to make sure the projectile doesn't hit twice
             Projectile.ownerHitCheck = true; // Make sure the owner of the projectile has line of sight to the target (aka can't hit things through tile).
             Projectile.DamageType = DamageClass.Melee; // Projectile is a melee projectile
-            Projectile.tileCollide = false;
+
         }
 
         public override void OnSpawn(IEntitySource source)
@@ -267,7 +267,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
 
             armPosition.Y += Owner.gfxOffY;
             Projectile.Center = armPosition; // Set projectile to arm position
-            Projectile.scale = Size * 3.5f * Owner.GetAdjustedItemScale(Owner.HeldItem); // Slightly scale up the projectile and also take into account melee size modifiers
+            Projectile.scale = Size * 3f * Owner.GetAdjustedItemScale(Owner.HeldItem); // Slightly scale up the projectile and also take into account melee size modifiers
 
             Owner.heldProj = Projectile.whoAmI; // set held projectile to this projectile
         }

@@ -23,7 +23,7 @@ namespace BeefsMod.Content.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 7;
             Item.autoReuse = true;
-            Item.damage = 250;
+            Item.damage = 280;
             Item.DamageType = DamageClass.Melee;
             Item.noMelee = true;
             Item.noUseGraphic = true;

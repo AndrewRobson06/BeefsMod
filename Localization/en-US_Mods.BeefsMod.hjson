@@ -235,7 +235,7 @@ Items: {
 
 	PumpkinHarvester: {
 		DisplayName: Pumpkin Harvester
-		Tooltip: Swings a massive scythe that inflicts hell fire and shadowflame
+		Tooltip: Swings a massive scythe that inflicts hellfire and shadowflame
 	}
 
 	OLDPumpkinHarvester: {

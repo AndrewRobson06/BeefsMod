@@ -9,6 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using BeefsMod.Content.Weapons.Summon;
+using BeefsMod.Content.Weapons.Ranged;
 
 namespace BeefsMod.Core.GlobalNPCs
 {
@@ -50,6 +51,9 @@ namespace BeefsMod.Core.GlobalNPCs
 
             if (npc.type == NPCID.GoblinSummoner)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ShadowflameWhip>(), 3, 1, 1));
+
+            if (npc.type == NPCID.GoblinSummoner)
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ShadowflameGrenade>(), 3, 1, 1));
 
 
         }

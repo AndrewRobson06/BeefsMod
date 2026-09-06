@@ -251,6 +251,11 @@ Items: {
 			Inflicts shadowflame on hit
 			'''
 	}
+
+	ShadowflameGrenade: {
+		DisplayName: Shadowflame Grenade
+		Tooltip: "Inflicts shadowflame on hit"
+	}
 }
 
 Projectiles: {
@@ -283,6 +288,8 @@ Projectiles: {
 	TheCannonBallProjectile.DisplayName: The Cannon Ball Projectile
 	PumpkinHarvesterProjectile.DisplayName: Pumpkin Harvester Projectile
 	ShadowflameWhipProjectile.DisplayName: Shadowflame Whip Projectile
+	ShadowflameGrenadeExplosion.DisplayName: Shadowflame Grenade Explosion
+	ShadowflameGrenadeProjectile.DisplayName: Shadowflame Grenade Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

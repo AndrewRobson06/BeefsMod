@@ -235,7 +235,10 @@ Items: {
 
 	PumpkinHarvester: {
 		DisplayName: Pumpkin Harvester
-		Tooltip: Swings a massive scythe that inflicts hellfire and shadowflame
+		Tooltip: '''
+				 Swings a massive scythe that inflicts hellfire and shadowflame
+				 Melee speed adds bonus damage instead of attack speed
+				 '''
 	}
 
 	OLDPumpkinHarvester: {
@@ -254,7 +257,16 @@ Items: {
 
 	ShadowflameGrenade: {
 		DisplayName: Shadowflame Grenade
-		Tooltip: "Inflicts shadowflame on hit"
+		Tooltip: Inflicts shadowflame on hit
+	}
+
+	APRound: {
+		DisplayName: AP Round
+		Tooltip:
+			'''
+			Ignores 20 points of enemy defence
+			Breaks enemy armour making them take more damage
+			'''
 	}
 }
 
@@ -290,6 +302,7 @@ Projectiles: {
 	ShadowflameWhipProjectile.DisplayName: Shadowflame Whip Projectile
 	ShadowflameGrenadeExplosion.DisplayName: Shadowflame Grenade Explosion
 	ShadowflameGrenadeProjectile.DisplayName: Shadowflame Grenade Projectile
+	APRoundProjectile.DisplayName: A P Round Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

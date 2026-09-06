@@ -21,9 +21,10 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
         private const float SWINGRANGE = 1.67f * (float)Math.PI; // The angle a swing attack covers (300 deg)
         private const float FIRSTHALFSWING = 0.45f; // How much of the swing happens before it reaches the target angle (in relation to swingRange)
         private const float SPINRANGE = 4.5f * (float)Math.PI; // The angle a spin attack covers (630 degrees)
-        private const float WINDUP = 0.15f; // How far back the player's hand goes when winding their attack (in relation to swingRange)
-        private const float UNWIND = 0.6f; // When should the sword start disappearing
+        private const float WINDUP = 0.2f; // How far back the player's hand goes when winding their attack (in relation to swingRange)
+        private const float UNWIND = 0.7f; // When should the sword start disappearing
         private const float SPINTIME = 2.5f; // How much longer a spin is than a swing
+
 
         private enum AttackType // Which attack is being performed
         {
@@ -84,7 +85,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             Projectile.usesLocalNPCImmunity = true; // Uses local immunity frames
             Projectile.localNPCHitCooldown = -1; // We set this to -1 to make sure the projectile doesn't hit twice
             Projectile.ownerHitCheck = true; // Make sure the owner of the projectile has line of sight to the target (aka can't hit things through tile).
-            Projectile.DamageType = DamageClass.Melee; // Projectile is a melee projectile
+            Projectile.DamageType = DamageClass.MeleeNoSpeed; // Projectile is a melee projectile
 
         }
 
@@ -355,4 +356,19 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
         }
 
     }
+
+    public class ScaleDamage : ModPlayer //item breaks with too high of melee speed, being a pain to fix to now melee speed will increase the weapon damage. Will this be op? maybe but who gaf
+    {
+        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
+        {
+            if (proj.DamageType.CountsAsClass(DamageClass.MeleeNoSpeed))
+            {
+                float bonusDamage = Player.GetAttackSpeed(DamageClass.Melee);
+
+                if (bonusDamage > 0)
+                    modifiers.SourceDamage += bonusDamage / 7;
+            }
+        }
+    }
+
 }

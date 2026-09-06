@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System;
 
 namespace BeefsMod.Content.Weapons.Melee
 {
@@ -24,11 +25,12 @@ namespace BeefsMod.Content.Weapons.Melee
             Item.knockBack = 7;
             Item.autoReuse = true;
             Item.damage = 280;
-            Item.DamageType = DamageClass.Melee;
+            Item.DamageType = DamageClass.MeleeNoSpeed;
             Item.noMelee = true;
             Item.noUseGraphic = true;
 
             Item.shoot = ModContent.ProjectileType<PumpkinHarvesterProjectile>();
+
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -44,6 +46,11 @@ namespace BeefsMod.Content.Weapons.Melee
         {
             if (comboExpireTimer++ >= 120) // after 120 ticks (== 2 seconds) in inventory, reset the attack pattern
                 attackType = 0;
+
+            //double boostDamage;
+
+            //boostDamage = Math.Round(player.GetAttackSpeed(DamageClass.Melee));
+            //Item.damage = Convert.ToInt32(boostDamage);
         }
 
         public override bool MeleePrefix()

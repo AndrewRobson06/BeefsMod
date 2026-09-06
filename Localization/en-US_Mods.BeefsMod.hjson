@@ -242,6 +242,15 @@ Items: {
 		DisplayName: O L D Pumpkin Harvester
 		Tooltip: ""
 	}
+
+	ShadowflameWhip: {
+		DisplayName: Shadowflame Whip
+		Tooltip:
+			'''
+			8 summon tag damage
+			Inflicts shadowflame on hit
+			'''
+	}
 }
 
 Projectiles: {
@@ -273,6 +282,7 @@ Projectiles: {
 	TheCannonBallExplode.DisplayName: The Cannon Ball Explode
 	TheCannonBallProjectile.DisplayName: The Cannon Ball Projectile
 	PumpkinHarvesterProjectile.DisplayName: Pumpkin Harvester Projectile
+	ShadowflameWhipProjectile.DisplayName: Shadowflame Whip Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore
@@ -287,6 +297,11 @@ Buffs: {
 	DiamondBladeStaffBuff: {
 		DisplayName: Diamond Protection
 		Description: A friendly diamond is fighting for you!
+	}
+
+	ShadowflameWhipTag: {
+		DisplayName: Shadowflame Whip Tag
+		Description: Mods.BeefsMod.Buffs.ShadowflameWhipTag.Description
 	}
 }
 

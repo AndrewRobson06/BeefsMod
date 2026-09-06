@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
+using BeefsMod.Content.Weapons.Summon;
 
 namespace BeefsMod.Core.GlobalNPCs
 {
@@ -46,6 +47,9 @@ namespace BeefsMod.Core.GlobalNPCs
 
             if (npc.type == NPCID.Pumpking)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PumpkinHarvester>(), 35, 1, 1));
+
+            if (npc.type == NPCID.GoblinSummoner)
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ShadowflameWhip>(), 3, 1, 1));
 
 
         }

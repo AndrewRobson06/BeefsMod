@@ -34,6 +34,8 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.noMelee = true;
             Item.noUseGraphic = true;
 
+            Item.value = Item.sellPrice(gold: 2);
+
         }
 
     }

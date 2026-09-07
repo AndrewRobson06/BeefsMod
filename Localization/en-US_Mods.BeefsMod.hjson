@@ -272,12 +272,12 @@ Items: {
 
 	GildedColt: {
 		DisplayName: Gilded Colt
-		Tooltip: "Fires in a two shot burst"
+		Tooltip: Fires in a two shot burst
 	}
 
 	ResplendentColt: {
 		DisplayName: Resplendent Colt
-		Tooltip: "Fires in a two shot burst"
+		Tooltip: Fires in a two shot burst
 	}
 }
 

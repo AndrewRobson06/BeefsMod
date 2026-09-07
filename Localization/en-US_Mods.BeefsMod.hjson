@@ -291,10 +291,16 @@ Items: {
 
 	PygmyShield: {
 		DisplayName: Pygmy Shield
-		Tooltip: '''
-				 Increases max number of minions by 1
-				 Grants immunity to knockback
-				 '''
+		Tooltip:
+			'''
+			Increases max number of minions by 1
+			Grants immunity to knockback
+			'''
+	}
+
+	VenomSludgeTome: {
+		DisplayName: Toxic Sludge Tome
+		Tooltip: Shoots a slow moving ball of thick toxic sludge
 	}
 }
 
@@ -331,6 +337,7 @@ Projectiles: {
 	ShadowflameGrenadeExplosion.DisplayName: Shadowflame Grenade Explosion
 	ShadowflameGrenadeProjectile.DisplayName: Shadowflame Grenade Projectile
 	APRoundProjectile.DisplayName: A P Round Projectile
+	VenomSludgeTomeProjectile.DisplayName: Venom Sludge Tome Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

@@ -302,6 +302,15 @@ Items: {
 		DisplayName: Toxic Sludge Tome
 		Tooltip: Shoots a slow moving ball of thick toxic sludge
 	}
+
+	ShroomPoweredAssultRifle: {
+		DisplayName: Shroom Powered Assult Rifle
+		Tooltip: '''
+				 25% chance to not consume ammo
+				 Fires in a twelve shot burts
+				 'Mushroom!'
+				 '''
+	}
 }
 
 Projectiles: {

@@ -282,9 +282,18 @@ Items: {
 
 	BioPoweredRifle: {
 		DisplayName: Bio Powered Assault Rifle
+		Tooltip:
+			'''
+			18% chance to save ammo
+			Fires in a four shot burst
+			'''
+	}
+
+	PygmyShield: {
+		DisplayName: Pygmy Shield
 		Tooltip: '''
-				 18% chance to save ammo
-				 Fires in a four shot burst
+				 Increases max number of minions by 1
+				 Grants immunity to knockback
 				 '''
 	}
 }

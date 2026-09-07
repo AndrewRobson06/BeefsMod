@@ -21,6 +21,8 @@ namespace BeefsMod.Content.Weapons.Ranged
 
             Item.rare = ItemRarityID.Blue;
 
+            Item.value = Item.sellPrice(gold: 3, silver: 39);
+
             Item.useTime = 8;
             Item.useAnimation = 16;
             Item.useStyle = ItemUseStyleID.Shoot;

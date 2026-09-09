@@ -1,5 +1,4 @@
 ﻿using BeefsMod.Content.Weapons.Magic.Projectiles;
-using BeefsMod.Content.Weapons.Ranged.Projectiles;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -30,7 +29,7 @@ namespace BeefsMod.Content.Weapons.Magic
             Item.useTurn = true;
             Item.UseSound = SoundID.Item43;
             Item.knockBack = 1f;
-            Item.value = 250000; //sells for about 5 gold 50 silver
+            Item.value = Item.sellPrice(gold: 1, silver: 75);
             Item.shootSpeed = 3f;
             Item.shoot = ModContent.ProjectileType<VenomSludgeTomeProjectile>();
             Item.autoReuse = true;

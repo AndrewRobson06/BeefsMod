@@ -31,7 +31,7 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.UseSound = SoundID.Item11;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 32;
+            Item.damage = 30;
             Item.knockBack = 6f;
             Item.noMelee = true;
 

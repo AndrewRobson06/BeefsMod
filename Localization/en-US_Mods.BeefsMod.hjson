@@ -305,11 +305,17 @@ Items: {
 
 	ShroomPoweredAssultRifle: {
 		DisplayName: Shroom Powered Assult Rifle
-		Tooltip: '''
-				 25% chance to not consume ammo
-				 Fires in a twelve shot burts
-				 'Mushroom!'
-				 '''
+		Tooltip:
+			'''
+			25% chance to not consume ammo
+			Fires in a twelve shot burts
+			'Mushroom!'
+			'''
+	}
+
+	SandBolt: {
+		DisplayName: Sand Bolt
+		Tooltip: Fires three homing sand bolts
 	}
 }
 
@@ -347,6 +353,7 @@ Projectiles: {
 	ShadowflameGrenadeProjectile.DisplayName: Shadowflame Grenade Projectile
 	APRoundProjectile.DisplayName: A P Round Projectile
 	VenomSludgeTomeProjectile.DisplayName: Venom Sludge Tome Projectile
+	SandBoltProjectile.DisplayName: Sand Bolt Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

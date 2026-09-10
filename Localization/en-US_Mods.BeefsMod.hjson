@@ -317,6 +317,20 @@ Items: {
 		DisplayName: Sand Bolt
 		Tooltip: Fires three homing sand bolts
 	}
+
+	NaniteArrow: {
+		DisplayName: Nano Arrow
+		Tooltip:
+			'''
+			Fast high tech arrows with very strong homing
+			'Smяt Targeting Software™'
+			'''
+	}
+
+	HighVelocityArrow: {
+		DisplayName: High Velocity Arrow
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -354,6 +368,8 @@ Projectiles: {
 	APRoundProjectile.DisplayName: A P Round Projectile
 	VenomSludgeTomeProjectile.DisplayName: Venom Sludge Tome Projectile
 	SandBoltProjectile.DisplayName: Sand Bolt Projectile
+	NaniteArrowProjectile.DisplayName: Nanite Arrow Projectile
+	HighVelocityArrowProjectile.DisplayName: High Velocity Arrow Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

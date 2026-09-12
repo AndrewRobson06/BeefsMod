@@ -336,6 +336,11 @@ Items: {
 		DisplayName: Crude Quiver
 		Tooltip: Increases arrow damage by 5%
 	}
+
+	MuzzleBrake: {
+		DisplayName: Muzzle Brake
+		Tooltip: "Increases bullet damage by 5%"
+	}
 }
 
 Projectiles: {

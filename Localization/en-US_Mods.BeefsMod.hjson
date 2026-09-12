@@ -331,6 +331,11 @@ Items: {
 		DisplayName: High Velocity Arrow
 		Tooltip: ""
 	}
+
+	CrudeQuiver: {
+		DisplayName: Crude Quiver
+		Tooltip: Increases arrow damage by 5%
+	}
 }
 
 Projectiles: {

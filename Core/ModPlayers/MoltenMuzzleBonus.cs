@@ -32,7 +32,7 @@ namespace BeefsMod.Core.ModPlayers
     {
         public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (Main.player[projectile.owner].GetModPlayer<MoltenMuzzleBonus>().hasMoltenMuzzle)
+            if (Main.player[projectile.owner].GetModPlayer<MoltenMuzzleBonus>().hasMoltenMuzzle && projectile.CountsAsClass(DamageClass.Ranged))
                 target.AddBuff(BuffID.OnFire3, 420);
         }
     }

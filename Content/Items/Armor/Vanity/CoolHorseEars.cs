@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using BeefsMod.Content.Rarities;
 
 namespace BeefsMod.Content.Items.Armor.Vanity
 {
@@ -18,7 +19,7 @@ namespace BeefsMod.Content.Items.Armor.Vanity
             Item.width = 22;
             Item.height = 28;
 
-            Item.rare = ItemRarityID.Cyan;
+            Item.rare = ModContent.RarityType<DedicatedItemRarity>();
             Item.value = Item.sellPrice(silver: 75);
             Item.vanity = true;
             Item.maxStack = 1;

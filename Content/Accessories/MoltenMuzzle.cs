@@ -25,6 +25,7 @@ namespace BeefsMod.Content.Accessories
         {
             player.bulletDamage += 0.6f;
             player.GetModPlayer<MoltenMuzzleBonus>().hasMoltenMuzzle = true;
+            hideVisual = true;
         }
 
         public override void AddRecipes()

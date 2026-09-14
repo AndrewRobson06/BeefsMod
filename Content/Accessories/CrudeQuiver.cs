@@ -23,6 +23,7 @@ namespace BeefsMod.Content.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.arrowDamage += 0.5f;
+            hideVisual = true;
         }
 
         public override void AddRecipes()
@@ -40,6 +41,15 @@ namespace BeefsMod.Content.Accessories
                 .AddIngredient(ItemID.LeadBar, 8)
                 .AddTile(TileID.Anvils)
                 .Register();
+
+            //add a modded recipe to magic quiver prob in wrong spot so move this code later
+            Recipe recipe = Recipe.Create(ItemID.MagicQuiver);
+            recipe.AddIngredient(ModContent.ItemType<CrudeQuiver>());
+            recipe.AddIngredient(ItemID.FallenStar, 15);
+            recipe.AddIngredient(ItemID.SoulofLight, 10);
+            recipe.AddTile(TileID.CrystalBall);
+            recipe.Register();
+
 
         }
     }

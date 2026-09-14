@@ -339,7 +339,16 @@ Items: {
 
 	MuzzleBrake: {
 		DisplayName: Muzzle Brake
-		Tooltip: "Increases bullet damage by 5%"
+		Tooltip: Increases bullet damage by 5%
+	}
+
+	MoltenMuzzle: {
+		DisplayName: Molten Muzzle
+		Tooltip:
+			'''
+			Increases bullet damage by 6%
+			Sets bullets on fire when shot
+			'''
 	}
 }
 

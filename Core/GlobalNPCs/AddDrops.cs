@@ -17,16 +17,13 @@ namespace BeefsMod.Core.GlobalNPCs
     {
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
-            if (npc.type == NPCID.Vampire){
-
+            if (npc.type == NPCID.Vampire)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<VampireTooth>(),30, 1, 1));
-            }
+            
 
             if (npc.type == NPCID.BloodNautilus)
-            {
-
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BloodlustSaber>(), 2, 1, 1));
-            }
+            
 
             if (npc.type == NPCID.PirateDeckhand)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TheCannonBall>(), 180, 1, 1));

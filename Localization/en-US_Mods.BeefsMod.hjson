@@ -350,6 +350,11 @@ Items: {
 			Sets bullets on fire when shot
 			'''
 	}
+
+	ShroomiteRepeater: {
+		DisplayName: Shroomite Repeater
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

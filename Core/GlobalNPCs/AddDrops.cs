@@ -55,6 +55,9 @@ namespace BeefsMod.Core.GlobalNPCs
             if (npc.type == NPCID.GoblinSummoner)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ShadowflameGrenade>(), 3, 1, 1));
 
+            if (npc.type == NPCID.FaceMonster)
+                npcLoot.Add(ItemDropRule.Common(ItemID.Leather, 20, 1, 3));
+
 
         }
     }

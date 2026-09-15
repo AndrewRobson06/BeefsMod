@@ -364,6 +364,14 @@ Items: {
 			'Sometimes the best ideas come from accidents'
 			'''
 	}
+
+	OverclockedBallista: {
+		DisplayName: Overclocked Ballista
+		Tooltip: 			'''
+		Fires ultra fast arrows
+			Hold to charge up a large cluster of arrows. A longer charge shoots more arrows (Up to 5 seconds)
+			'''
+	}
 }
 
 Projectiles: {
@@ -404,6 +412,8 @@ Projectiles: {
 	NaniteArrowProjectile.DisplayName: Nanite Arrow Projectile
 	HighVelocityArrowProjectile.DisplayName: High Velocity Arrow Projectile
 	UnstableBalistaProjectile.DisplayName: Unstable Balista Projectile
+	OverclockedBallistaProjectile.DisplayName: Overclocked Ballista Projectile
+	OverclockedBallistaArrow.DisplayName: Overclocked Ballista Arrow
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

@@ -16,7 +16,7 @@ using Terraria.ModLoader;
 
 namespace BeefsMod.Content.Weapons.Ranged
 {
-    public class UnstableBalista : ModItem
+    public class OverclockedBallista : ModItem
     {
 
 
@@ -27,9 +27,9 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.width = 74;
             Item.height = 76;
 
-            Item.rare = ItemRarityID.LightPurple;
+            Item.rare = ItemRarityID.Yellow;
 
-            Item.value = Item.sellPrice(gold: 30, silver:20);
+            Item.value = Item.sellPrice(gold: 60, silver: 20);
 
             Item.useTime = 10;
             Item.useAnimation = 10;
@@ -37,14 +37,12 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.autoReuse = true;
 
             Item.DamageType = DamageClass.Ranged;
-            Item.damage = 42;
+            Item.damage = 68;
             Item.knockBack = 6f;
             Item.noMelee = true;
             Item.channel = true;
-            Item.useAmmo = AmmoID.Arrow;
-            Item.consumeAmmoOnFirstShotOnly = true;
 
-            Item.shoot = ModContent.ProjectileType<UnstableBalistaProjectile>(); //i dunno why but do this
+            Item.shoot = ModContent.ProjectileType<OverclockedBallistaProjectile>(); //i dunno why but do this
             Item.shootSpeed = 10f;
             Item.noUseGraphic = true;
         }
@@ -52,7 +50,7 @@ namespace BeefsMod.Content.Weapons.Ranged
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            type = ModContent.ProjectileType<UnstableBalistaProjectile>();
+            type = ModContent.ProjectileType<OverclockedBallistaProjectile>();
 
             velocity = Vector2.Normalize(velocity) * HoldOutDistance;
 
@@ -64,20 +62,9 @@ namespace BeefsMod.Content.Weapons.Ranged
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.HallowedBar, 20)
-                .AddIngredient(ItemID.AdamantiteBar, 15)
-                .AddIngredient(ItemID.SoulofFright, 5)
-                .AddIngredient(ItemID.SoulofSight, 5)
-                .AddIngredient(ItemID.SoulofMight, 5)
-                .AddTile(TileID.MythrilAnvil)
-                .Register();
-
-            CreateRecipe()
-                .AddIngredient(ItemID.HallowedBar, 20)
-                .AddIngredient(ItemID.TitaniumBar, 15)
-                .AddIngredient(ItemID.SoulofFright, 5)
-                .AddIngredient(ItemID.SoulofSight, 5)
-                .AddIngredient(ItemID.SoulofMight, 5)
+                .AddIngredient(ModContent.ItemType<UnstableBalista>())
+                .AddIngredient(ItemID.ShroomiteBar, 15)
+                .AddIngredient(ItemID.SpectreBar, 15)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

@@ -14,8 +14,8 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
     {
         public override void SetDefaults()
         {
-            Projectile.width = 10; // The width of projectile hitbox
-            Projectile.height = 38; // The height of projectile hitbox
+            Projectile.width = 8; // The width of projectile hitbox
+            Projectile.height = 8; // The height of projectile hitbox
             Projectile.aiStyle = 1; // The ai style of the projectile, please reference the source code of Terraria
             Projectile.friendly = true; // Can the projectile deal damage to enemies?
             Projectile.hostile = false; // Can the projectile deal damage to the player?

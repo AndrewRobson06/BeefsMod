@@ -20,7 +20,7 @@ namespace BeefsMod.Content.Weapons.Ranged
     {
 
 
-        public const int HoldOutDistance = 20;
+        public const int HoldOutDistance = 25;
 
         public override void SetDefaults()
         {
@@ -35,14 +35,14 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.useAnimation = 10;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.autoReuse = true;
-            //Item.UseSound = SoundID.Item5;
-            //Item.reuseDelay = 30;
 
             Item.DamageType = DamageClass.Ranged;
             Item.damage = 70;
             Item.knockBack = 6f;
             Item.noMelee = true;
             Item.channel = true;
+            Item.useAmmo = AmmoID.Arrow;
+            Item.consumeAmmoOnFirstShotOnly = true;
 
             Item.shoot = ModContent.ProjectileType<UnstableBalistaProjectile>(); //i dunno why but do this
             Item.shootSpeed = 10f;
@@ -60,16 +60,6 @@ namespace BeefsMod.Content.Weapons.Ranged
 
             return false;
         }
-
-
-        /*public override bool CanConsumeAmmo(Item ammo, Player player)
-        {
-            if (player.ItemTimeIsZero)
-            {
-                return false;
-            }
-            return true;
-        }*/
 
         public override void AddRecipes()
         {

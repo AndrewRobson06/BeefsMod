@@ -27,8 +27,8 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
         }
         public override void SetDefaults()
         {
-            Projectile.width = 14; // The width of projectile hitbox
-            Projectile.height = 32; // The height of projectile hitbox
+            Projectile.width = 8; // The width of projectile hitbox
+            Projectile.height = 8; // The height of projectile hitbox
             Projectile.aiStyle = ProjAIStyleID.Arrow; // The ai style of the projectile, please reference the source code of Terraria
             Projectile.friendly = true; // Can the projectile deal damage to enemies?
             Projectile.hostile = false; // Can the projectile deal damage to the player?
@@ -51,11 +51,11 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
         public override void AI()
         {
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 5f));
+                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 3f));
 
-                Dust.NewDustPerfect(Projectile.Center, DustID.DrillContainmentUnit, velocity * 1.3f, 0, default, 1f).noGravity = true;
+                Dust.NewDustPerfect(Projectile.Center, DustID.Vortex, velocity * 1.3f, 0, default, 1f).noGravity = true;
             }
 
             float maxDetectRadius = 1200f;

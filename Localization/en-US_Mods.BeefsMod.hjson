@@ -355,6 +355,15 @@ Items: {
 		DisplayName: Shroomite Repeater
 		Tooltip: ""
 	}
+
+	UnstableBalista: {
+		DisplayName: Unstable Ballista
+		Tooltip:
+			'''
+			Hold to charge up a large cluster of arrows. A longer charge shoots more arrows (Up to 5 seconds)
+			'Sometimes the best ideas come from accidents'
+			'''
+	}
 }
 
 Projectiles: {
@@ -394,6 +403,7 @@ Projectiles: {
 	SandBoltProjectile.DisplayName: Sand Bolt Projectile
 	NaniteArrowProjectile.DisplayName: Nanite Arrow Projectile
 	HighVelocityArrowProjectile.DisplayName: High Velocity Arrow Projectile
+	UnstableBalistaProjectile.DisplayName: Unstable Balista Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

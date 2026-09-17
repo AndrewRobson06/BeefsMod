@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeefsMod.Content.Weapons.Ranged.Projectiles;
+using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +10,12 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
 namespace BeefsMod.Content.Weapons.Ranged
 {
     public class ChlorophytePipe : ModItem
     {
+        public const int HoldOutDistance = 25;
         public override void SetDefaults()
         {
             Item.width = 48;
@@ -25,7 +27,7 @@ namespace BeefsMod.Content.Weapons.Ranged
 
             Item.useTime = 30;
             Item.useAnimation = 30;
-            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.useStyle = ItemUseStyleID.HoldUp;
             Item.autoReuse = true;
             Item.UseSound = SoundID.Item63;
 
@@ -34,12 +36,18 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.knockBack = 6f;
             Item.noMelee = true;
             Item.shootSpeed = 10f;
-            Item.shoot = ProjectileID.PurificationPowder; //i dunno why but do this
+            Item.shoot = ModContent.ProjectileType<ChlorophytePipeProjectile>(); //i dunno why but do this
             Item.useAmmo = AmmoID.Dart;
+            Item.noUseGraphic = true;
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            Projectile.NewProjectileDirect(source, position, velocity, type, damage, knockback, player.whoAmI);
+            type = ModContent.ProjectileType<ChlorophytePipeProjectile>();
+
+            velocity = Vector2.Normalize(velocity) * HoldOutDistance;
+
+            Projectile.NewProjectile(source, position, velocity, type, damage, knockback, Main.myPlayer);
+
             return false;
         }
 

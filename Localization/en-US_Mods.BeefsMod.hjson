@@ -426,6 +426,7 @@ Projectiles: {
 	OverclockedBallistaProjectile.DisplayName: Overclocked Ballista Projectile
 	OverclockedBallistaArrow.DisplayName: Overclocked Ballista Arrow
 	BoneDartProjectile.DisplayName: Bone Dart Projectile
+	ChlorophytePipeProjectile.DisplayName: Chlorophyte Pipe Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

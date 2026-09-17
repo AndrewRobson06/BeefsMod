@@ -378,6 +378,11 @@ Items: {
 		DisplayName: Bone Dart
 		Tooltip: ""
 	}
+
+	ChlorophytePipe: {
+		DisplayName: Chlorophyte Pipe
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

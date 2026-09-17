@@ -26,10 +26,6 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
             Projectile.extraUpdates = 2; // Set to above 0 if you want the projectile to update multiple time in a frame
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
-
-
-
-            //AIType = ProjectileID.PoisonDart; // Act exactly like default Bullet
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

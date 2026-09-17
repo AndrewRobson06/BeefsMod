@@ -367,10 +367,16 @@ Items: {
 
 	OverclockedBallista: {
 		DisplayName: Overclocked Ballista
-		Tooltip: 			'''
-		Fires ultra fast arrows
+		Tooltip:
+			'''
+			Fires ultra fast arrows
 			Hold to charge up a large cluster of arrows. A longer charge shoots more arrows (Up to 5 seconds)
 			'''
+	}
+
+	BoneDart: {
+		DisplayName: Bone Dart
+		Tooltip: ""
 	}
 }
 
@@ -414,6 +420,7 @@ Projectiles: {
 	UnstableBalistaProjectile.DisplayName: Unstable Balista Projectile
 	OverclockedBallistaProjectile.DisplayName: Overclocked Ballista Projectile
 	OverclockedBallistaArrow.DisplayName: Overclocked Ballista Arrow
+	BoneDartProjectile.DisplayName: Bone Dart Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

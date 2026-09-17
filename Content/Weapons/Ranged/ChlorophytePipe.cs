@@ -1,5 +1,6 @@
 ﻿using BeefsMod.Content.Weapons.Ranged.Projectiles;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -36,6 +38,7 @@ namespace BeefsMod.Content.Weapons.Ranged
             Item.knockBack = 6f;
             Item.noMelee = true;
             Item.shootSpeed = 10f;
+            //Item.shoot = ProjectileID.PurificationPowder;
             Item.shoot = ModContent.ProjectileType<ChlorophytePipeProjectile>(); //i dunno why but do this
             Item.useAmmo = AmmoID.Dart;
             Item.noUseGraphic = true;
@@ -48,13 +51,22 @@ namespace BeefsMod.Content.Weapons.Ranged
 
             Projectile.NewProjectile(source, position, velocity, type, damage, knockback, Main.myPlayer);
 
-            return false;
+            return true;
         }
 
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
             return Main.rand.NextFloat() >= 0.15f; // 15% chance to not consume ammo
         }
+
+        /*public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
+        {
+            Texture2D texture = TextureAssets.Item[Type].Value;
+            spriteBatch.Draw(texture, new Vector2(Item.position.X - Main.screenPosition.X + Item.width * 0.5f, Item.position.Y - Main.screenPosition.Y + Item.height - texture.Height * 0.5f),
+                new Rectangle(0, 0, texture.Width, texture.Height), Color.White, rotation, texture.Size(), scale, SpriteEffects.None, 0f);
+            
+            return true;
+        }*/
 
         public override void AddRecipes()
         {

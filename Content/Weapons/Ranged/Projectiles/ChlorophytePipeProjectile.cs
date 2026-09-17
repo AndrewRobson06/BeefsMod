@@ -18,10 +18,13 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
             Projectile.width = 48;
             Projectile.height = 24;
             Projectile.tileCollide = false;
-            Projectile.friendly = false;
+            Projectile.friendly = true;
             Projectile.aiStyle = -1;
+            //DrawOffsetX = -17;
+            DrawOriginOffsetY = -10;
         }
 
+        public override bool? CanDamage() => false;
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
@@ -34,7 +37,7 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
 
             Vector2 playerCenter = player.RotatedRelativePoint(player.MountedCenter);
 
-            int animationSpeed = Math.Min(40 / 40, 3);
+            int animationSpeed = Math.Min(1 / 40, 3);
 
             if (Main.myPlayer == Projectile.owner)
             {
@@ -48,6 +51,20 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
                         Projectile.netUpdate = true;
                     }
 
+                    for (int i = 0; i < 1; i++)
+                    {
+                        // Calculate a spawn location, taking into account the muzzle placement and a random variation
+                        var spawnLocation = playerCenter + holdoutOffset * 1.2f;
+                        bool ammoConsumed = player.PickAmmo(heldItem, out int projToShoot, out float speed, out int damage, out float knockBack, out int usedAmmoItemId);
+
+                        if (ammoConsumed)
+                        {
+                            var source = player.GetSource_ItemUse_WithPotentialAmmo(heldItem, usedAmmoItemId);
+                            Projectile.NewProjectile(source, spawnLocation, Vector2.Normalize(Projectile.velocity) * speed, projToShoot, damage, knockBack, Projectile.owner);
+                        }
+                    }
+
+                    
                     // Set the projectile velocity, which is actually the holdout offset for held projectiles.
                     Projectile.velocity = holdoutOffset;
 
@@ -66,14 +83,14 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
             Projectile.timeLeft = 2;
 
             //Projectile.velocity.X *= 1f + Main.rand.Next(-3, 4) * 0.04f;
-            Projectile.velocity.Y += -10;
+            //Projectile.velocity.Y += -10;
 
-            Vector2 aim = Main.MouseWorld - player.MountedCenter;
-            aim.Normalize();
-            player.ChangeDir(aim.X > 0 ? 1 : -1);
+            //Vector2 aim = Main.MouseWorld - player.MountedCenter;
+            //aim.Normalize();
+            //player.ChangeDir(aim.X > 0 ? 1 : -1);
         }
 
-        public void FireShot(Vector2 velocity)
+        /*public void FireShot(Vector2 velocity)
         {
             Player player = Main.player[Projectile.owner];
 
@@ -100,6 +117,6 @@ namespace BeefsMod.Content.Weapons.Ranged.Projectiles
 
             }
             Projectile.Kill();
-        }
+        }*/
     }
 }

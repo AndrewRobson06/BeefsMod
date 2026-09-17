@@ -24,8 +24,8 @@ namespace BeefsMod.Content.Weapons.Ranged.Ammo
             Projectile.ignoreWater = true; // Does the projectile's speed be influenced by water?
             Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.extraUpdates = 2; // Set to above 0 if you want the projectile to update multiple time in a frame
-            Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 10;
+            //Projectile.usesLocalNPCImmunity = true;
+            //Projectile.localNPCHitCooldown = 10;
         }
 
         public override bool OnTileCollide(Vector2 oldVelocity)

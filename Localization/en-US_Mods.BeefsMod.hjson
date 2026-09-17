@@ -381,7 +381,7 @@ Items: {
 
 	ChlorophytePipe: {
 		DisplayName: Chlorophyte Pipe
-		Tooltip: ""
+		Tooltip: "15% chance to not consume ammo"
 	}
 }
 

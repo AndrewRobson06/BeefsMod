@@ -381,7 +381,12 @@ Items: {
 
 	ChlorophytePipe: {
 		DisplayName: Chlorophyte Pipe
-		Tooltip: "15% chance to not consume ammo"
+		Tooltip: 15% chance to not consume ammo
+	}
+
+	PurplerClubberfish: {
+		DisplayName: Purpler Clubberfish
+		Tooltip: ""
 	}
 }
 
@@ -427,6 +432,7 @@ Projectiles: {
 	OverclockedBallistaArrow.DisplayName: Overclocked Ballista Arrow
 	BoneDartProjectile.DisplayName: Bone Dart Projectile
 	ChlorophytePipeProjectile.DisplayName: Chlorophyte Pipe Projectile
+	PurplerClubberfishProjectile.DisplayName: Purpler Clubberfish Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

@@ -203,7 +203,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             target.AddBuff(BuffID.Confused, 420);
         }
 
-        public override bool OnTileCollide(Vector2 oldVelocity)
+        /*public override bool OnTileCollide(Vector2 oldVelocity)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -213,7 +213,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             }
             SoundEngine.PlaySound(SoundID.Roar);
             return true;
-        }
+        }*/
 
         // Taken from Main.DrawProj_Excalibur()
         // Look at the source code for the other sword types.

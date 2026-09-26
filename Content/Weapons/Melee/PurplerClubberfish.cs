@@ -17,6 +17,9 @@ namespace BeefsMod.Content.Weapons.Melee
 {
     public class PurplerClubberfish : ModItem //help from example mod
     {
+        public int slamCooldown = 0;
+
+        public bool soundPlayed = true;
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Swing;
@@ -43,6 +46,59 @@ namespace BeefsMod.Content.Weapons.Melee
             NetMessage.SendData(MessageID.PlayerControls, number: player.whoAmI); // Sync the changes in multiplayer.
 
             return base.Shoot(player, source, position, velocity, type, damage, knockback);
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            if (slamCooldown != 0)
+                slamCooldown--;
+
+            if (slamCooldown == 0 && soundPlayed == false)
+            {
+                SoundEngine.PlaySound(SoundID.MaxMana);
+                soundPlayed = true;
+            }
+
+                
+
+        }
+
+        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
+        {
+            if (Collision.SolidCollision(hitbox.BottomLeft(), hitbox.Width, hitbox.Height - 99)) //hitbox.height is subbed by item.height * item.scale with decimal removed
+            {
+                if (slamCooldown == 0)
+                {
+                    for (int i = 0; i < 30; i++)
+                    {
+                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
+
+                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 20f, 0, default, 4f).noGravity = true;
+                    }
+
+                    for (int i = 0; i < 25; i++)
+                    {
+                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 25f));
+
+                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 15f, 0, default, 4f).noGravity = true;
+                    }
+
+                    for (int i = 0; i < 50; i++)
+                    {
+                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
+
+                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 10f, 0, default, 4f).noGravity = true;
+                    }
+
+                    slamCooldown = 120; // 2 seconds
+                    SoundEngine.PlaySound(SoundID.Item14);
+                    soundPlayed = false;
+                }
+
+
+
+
+            }
         }
 
         public override void AddRecipes()

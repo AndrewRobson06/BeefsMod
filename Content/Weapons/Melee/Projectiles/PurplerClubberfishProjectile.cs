@@ -1,4 +1,5 @@
-﻿using BeefsMod.Content.Weapons.Ranged.Projectiles;
+﻿using BeefsMod.Content.Weapons.Ranged;
+using BeefsMod.Content.Weapons.Ranged.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil;
@@ -191,6 +192,30 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             hit.HitDirection = (Main.player[Projectile.owner].Center.X < target.Center.X) ? 1 : (-1);
 
             target.AddBuff(BuffID.Confused, 420);
+
+            for (int i = 0; i < 15; i++)
+            {
+                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 15f));
+
+                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 5f, 0, default, 4f).noGravity = true;
+            }
+
+            for (int i = 0; i < 25; i++)
+            {
+                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 25f));
+
+                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 15f, 0, default, 4f).noGravity = true;
+            }
+
+            for (int i = 0; i < 50; i++)
+            {
+                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
+
+                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 10f, 0, default, 4f).noGravity = true;
+            }
+
+            SoundEngine.PlaySound(SoundID.Item14);
+            Explode();
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)
@@ -293,5 +318,53 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, MathHelper.PiOver2 + rotation, origin, scaleLeftRight * 0.6f, dir);
             Main.EntitySpriteDraw(sparkleTexture, drawPos, null, smallColor, 0f + rotation, origin, scaleUpDown * 0.6f, dir);
         }*/
+
+        internal void Explode()
+        {
+            if (Main.myPlayer == Projectile.owner)
+            {
+                Projectile.NewProjectile(Projectile.GetSource_Death(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<PurplerClubberfishExplosion>(),
+                    Projectile.damage + 137, Projectile.knockBack * 1.5f, Projectile.owner, 100);
+            }
+        }
     }
+
+    public class PurplerClubberfishExplosion : ModProjectile 
+    {
+        public override string Texture => "BeefsMod/Content/Weapons/Melee/PurplerClubberfish";
+
+        private float Progress => Utils.Clamp(1 - Projectile.timeLeft / 10f, 0f, 1f);
+
+        private float Radius => Projectile.ai[0] * Progress;
+
+        public override void SetDefaults()
+        {
+            Projectile.alpha = 255;
+
+            Projectile.width = 2;
+            Projectile.height = 2;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.friendly = true;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.timeLeft = 10;
+
+            //Projectile.usesLocalNPCImmunity = true;
+            //Projectile.localNPCHitCooldown = 40;
+        }
+        public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
+        {
+            Vector2 line = targetHitbox.Center.ToVector2() - Projectile.Center;
+            line.Normalize();
+            line *= Radius + 300;
+            return Collision.CheckAABBvLineCollision(targetHitbox.Center(), targetHitbox.Size(), Projectile.Center, Projectile.Center + line);
+
+        }
+
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.Confused, 420);
+        }
+    }
+
 }

@@ -20,18 +20,20 @@ namespace BeefsMod.Content.Weapons.Melee
         public int slamCooldown = 0;
 
         public bool soundPlayed = true;
+
+        //public bool spawnDust = false;
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.useAnimation = 40;
-            Item.useTime = 40;
-            Item.damage = 70;
+            Item.useAnimation = 60;
+            Item.useTime = 60;
+            Item.damage = 88;
             Item.knockBack = 8f;
             Item.height = 62;
             Item.scale = 1.6f;
             Item.UseSound = SoundID.Item1;
-            Item.rare = ItemRarityID.Yellow;
-            Item.value = Item.sellPrice(gold: 11, silver: 40); // Sell price is 5 times less than the buy price.
+            Item.rare = ItemRarityID.Purple;
+            Item.value = Item.sellPrice(gold: 9, silver: 30); // Sell price is 5 times less than the buy price.
             Item.DamageType = DamageClass.Melee;
             Item.shoot = ModContent.ProjectileType<PurplerClubberfishProjectile>();
             //Item.noMelee = true; // This is set the sword itself doesn't deal damage (only the projectile does).
@@ -47,60 +49,6 @@ namespace BeefsMod.Content.Weapons.Melee
 
             return base.Shoot(player, source, position, velocity, type, damage, knockback);
         }
-
-        public override void UpdateInventory(Player player)
-        {
-            if (slamCooldown != 0)
-                slamCooldown--;
-
-            if (slamCooldown == 0 && soundPlayed == false)
-            {
-                SoundEngine.PlaySound(SoundID.MaxMana);
-                soundPlayed = true;
-            }
-
-                
-
-        }
-
-        public override void UseItemHitbox(Player player, ref Rectangle hitbox, ref bool noHitbox)
-        {
-            if (Collision.SolidCollision(hitbox.BottomLeft(), hitbox.Width, hitbox.Height - 99)) //hitbox.height is subbed by item.height * item.scale with decimal removed
-            {
-                if (slamCooldown == 0)
-                {
-                    for (int i = 0; i < 30; i++)
-                    {
-                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
-
-                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 20f, 0, default, 4f).noGravity = true;
-                    }
-
-                    for (int i = 0; i < 25; i++)
-                    {
-                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 25f));
-
-                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 15f, 0, default, 4f).noGravity = true;
-                    }
-
-                    for (int i = 0; i < 50; i++)
-                    {
-                        Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
-
-                        Dust.NewDustPerfect(Item.position, DustID.Corruption, velocity * 10f, 0, default, 4f).noGravity = true;
-                    }
-
-                    slamCooldown = 120; // 2 seconds
-                    SoundEngine.PlaySound(SoundID.Item14);
-                    soundPlayed = false;
-                }
-
-
-
-
-            }
-        }
-
         public override void AddRecipes()
         {
             CreateRecipe()

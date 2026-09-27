@@ -386,7 +386,7 @@ Items: {
 
 	PurplerClubberfish: {
 		DisplayName: Purpler Clubberfish
-		Tooltip: ""
+		Tooltip: Tipper hits cause a large explosion
 	}
 }
 
@@ -433,6 +433,7 @@ Projectiles: {
 	BoneDartProjectile.DisplayName: Bone Dart Projectile
 	ChlorophytePipeProjectile.DisplayName: Chlorophyte Pipe Projectile
 	PurplerClubberfishProjectile.DisplayName: Purpler Clubberfish Projectile
+	PurplerClubberfishExplosion.DisplayName: Purpler Clubberfish Explosion
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

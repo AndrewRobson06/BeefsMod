@@ -395,7 +395,7 @@ Items: {
 
 	MartianGrenade: {
 		DisplayName: Martian Grenade
-		Tooltip: ""
+		Tooltip: "Creates homing electrical bolts"
 	}
 }
 
@@ -445,6 +445,7 @@ Projectiles: {
 	PurplerClubberfishExplosion.DisplayName: Purpler Clubberfish Explosion
 	MartianGrenadeExplosion.DisplayName: Martian Grenade Explosion
 	MartianGrenadeProjectile.DisplayName: Martian Grenade Projectile
+	MartianGrenadeHomingProjectile.DisplayName: Martian Grenade Homing Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

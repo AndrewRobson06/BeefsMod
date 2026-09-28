@@ -55,6 +55,9 @@ namespace BeefsMod.Core.GlobalNPCs
             if (npc.type == NPCID.FaceMonster)
                 npcLoot.Add(ItemDropRule.Common(ItemID.Leather, 20, 1, 3));
 
+            if (npc.type == NPCID.MartianSaucer)
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MartianGrenade>(), 10, 1, 1));
+
 
         }
     }

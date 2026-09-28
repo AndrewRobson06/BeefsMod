@@ -386,10 +386,16 @@ Items: {
 
 	PurplerClubberfish: {
 		DisplayName: Purpler Clubberfish
-		Tooltip: '''
-		Tipper hits cause a large explosion
-		'An upgrade to already the best weapon in the game'
-		'''
+		Tooltip:
+			'''
+			Tipper hits cause a large explosion
+			'An upgrade to already the best weapon in the game'
+			'''
+	}
+
+	MartianGrenade: {
+		DisplayName: Martian Grenade
+		Tooltip: ""
 	}
 }
 
@@ -437,6 +443,8 @@ Projectiles: {
 	ChlorophytePipeProjectile.DisplayName: Chlorophyte Pipe Projectile
 	PurplerClubberfishProjectile.DisplayName: Purpler Clubberfish Projectile
 	PurplerClubberfishExplosion.DisplayName: Purpler Clubberfish Explosion
+	MartianGrenadeExplosion.DisplayName: Martian Grenade Explosion
+	MartianGrenadeProjectile.DisplayName: Martian Grenade Projectile
 }
 
 Tiles.ScarabiteOre.MapEntry: Scarabite Ore

@@ -395,7 +395,7 @@ Items: {
 
 	MartianGrenade: {
 		DisplayName: Martian Grenade
-		Tooltip: "Creates homing electrical bolts"
+		Tooltip: Creates homing electrical bolts
 	}
 }
 

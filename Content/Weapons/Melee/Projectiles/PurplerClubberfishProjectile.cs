@@ -17,7 +17,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
     {
         // We could use a vanilla texture if we want instead of supplying our own.
         // public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.Excalibur;
-
+        public int cooldown = 0;
         public override void SetStaticDefaults()
         {
             // If a Jellyfish is zapping and we attack it with this projectile, it will deal damage to us.
@@ -68,6 +68,9 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             // if (Projectile.localAI[0] == 0f) {
             // 	SoundEngine.PlaySound(SoundID.Item60 with { Volume = 0.65f }, Projectile.position);
             // }
+
+            if (cooldown > 0)
+                cooldown --;
 
             Projectile.localAI[0]++; // Current time that the projectile has been alive.
             Player player = Main.player[Projectile.owner];
@@ -192,30 +195,34 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             hit.HitDirection = (Main.player[Projectile.owner].Center.X < target.Center.X) ? 1 : (-1);
 
             target.AddBuff(BuffID.Confused, 420);
-
-            for (int i = 0; i < 15; i++)
+            if (cooldown <= 0)
             {
-                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 15f));
+                for (int i = 0; i < 15; i++)
+                {
+                    Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 15f));
 
-                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 5f, 0, default, 4f).noGravity = true;
+                    Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 5f, 0, default, 4f).noGravity = true;
+                }
+
+                for (int i = 0; i < 25; i++)
+                {
+                    Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 25f));
+
+                    Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 15f, 0, default, 4f).noGravity = true;
+                }
+
+                for (int i = 0; i < 50; i++)
+                {
+                    Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
+
+                    Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 10f, 0, default, 4f).noGravity = true;
+                }
+
+                SoundEngine.PlaySound(SoundID.Item14);
+                Explode();
+                cooldown = 20; // 0.33 second cooldown between explosions
             }
-
-            for (int i = 0; i < 25; i++)
-            {
-                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 25f));
-
-                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 15f, 0, default, 4f).noGravity = true;
-            }
-
-            for (int i = 0; i < 50; i++)
-            {
-                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 30f));
-
-                Dust.NewDustPerfect(target.position, DustID.Corruption, velocity * 10f, 0, default, 4f).noGravity = true;
-            }
-
-            SoundEngine.PlaySound(SoundID.Item14);
-            Explode();
+            
         }
 
         public override void OnHitPlayer(Player target, Player.HurtInfo info)

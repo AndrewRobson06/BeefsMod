@@ -386,7 +386,10 @@ Items: {
 
 	PurplerClubberfish: {
 		DisplayName: Purpler Clubberfish
-		Tooltip: Tipper hits cause a large explosion
+		Tooltip: '''
+		Tipper hits cause a large explosion
+		'An upgrade to already the best weapon in the game'
+		'''
 	}
 }
 

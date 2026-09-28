@@ -49,6 +49,18 @@ namespace BeefsMod.Content.Weapons.Melee
 
             return base.Shoot(player, source, position, velocity, type, damage, knockback);
         }
+
+        public override void MeleeEffects(Player player, Rectangle hitbox)
+        {
+            if (Main.rand.NextBool(2))
+            {
+                int d = Dust.NewDust(hitbox.TopLeft(), hitbox.Width, hitbox.Height, DustID.Corruption);
+
+                Dust dust = Main.dust[d];
+
+                dust.noGravity = true;
+            }
+        }
         public override void AddRecipes()
         {
             CreateRecipe()

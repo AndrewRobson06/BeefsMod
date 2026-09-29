@@ -82,7 +82,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
 
             {
                 Main.spriteBatch.End();
-                Main.spriteBatch.Begin(default, BlendState.Additive, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
+                Main.spriteBatch.Begin((SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix));
 
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, 5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
                     null, new Color(255, 0, 131, 255), 0, starTex.Size() / 2f, 0.8f, 0f, 0f);

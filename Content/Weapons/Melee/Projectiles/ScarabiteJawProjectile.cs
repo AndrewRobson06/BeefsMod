@@ -81,7 +81,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
 
 
             {
-               /* Main.spriteBatch.End();
+               Main.spriteBatch.End();
                 Main.spriteBatch.Begin((SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix));
 
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, 5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
@@ -92,7 +92,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, -5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
                     null, new Color(255, 0, 131, 255), 0, starTex.Size() / 2f, 0.8f, 0f, 0f);
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, -5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
-                    null, new Color(204, 56, 132, 255), 0, starTex.Size() / 2f, 0.5f, 0f, 0f);*/
+                    null, new Color(204, 56, 132, 255), 0, starTex.Size() / 2f, 0.5f, 0f, 0f);
 
                 //Main.spriteBatch.Draw(bloomTex, Projectile.Center - new Vector2(23, 0).RotatedBy(0) - Main.screenPosition,
                     //null, new Color(0, 185, 255, 100), 0, bloomTex.Size() / 2f, 0.4f, 0f, 0f);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Terraria;
 using Terraria.Chat;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.IO;
 using Terraria.Localization;
@@ -33,6 +34,27 @@ namespace BeefsMod.Content.Tiles
             }
         }
 
+        public class ElbaiteItem : ModItem 
+        {
+            public override void SetStaticDefaults()
+            {
+                Item.ResearchUnlockCount = 100;
+                ItemID.Sets.SortingPriorityMaterials[Type] = 58;
+            }
+
+            public override void SetDefaults()
+            {
+                //Item.DefaultToPlaceableTile(ModContent.TileType<ScarabiteOre>());
+                Item.Size = new(12);
+                Item.value = Item.sellPrice(silver: 19);
+                Item.rare = ItemRarityID.LightRed;
+
+                Item.maxStack = 9999;
+
+            }
+        }
+
+
         public override void SetStaticDefaults()
         {
             TileID.Sets.Ore[Type] = true;
@@ -44,6 +66,7 @@ namespace BeefsMod.Content.Tiles
             Main.tileMergeDirt[Type] = true;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
+            
 
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(128, 41, 67), name);
@@ -52,7 +75,7 @@ namespace BeefsMod.Content.Tiles
             VanillaFallbackOnModDeletion = TileID.AmberStoneBlock;
             HitSound = SoundID.Tink;
             MineResist = 2f;
-            MinPick = 165;
+            MinPick = 165; 
         }
     }
 
@@ -100,15 +123,15 @@ namespace BeefsMod.Content.Tiles
                     new Color(128, 41, 67));
             }
 
-            for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 0.0013); k++)
+            for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 0.0001); k++)
             {
                 int x = WorldGen.genRand.Next(0, Main.maxTilesX);
-                int y = WorldGen.genRand.Next((int)GenVars.worldSurfaceLow, Main.maxTilesY);
+                int y = WorldGen.genRand.Next((int)GenVars.worldSurfaceLow, Main.maxTilesY) + 900;
 
                 Tile tile = Framing.GetTileSafely(x, y);
 
                 if (tile.HasTile && tile.TileType == TileID.Stone)
-                    WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 13), WorldGen.genRand.Next(15, 25),
+                    WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 5), WorldGen.genRand.Next(2, 5),
                         ModContent.TileType<ElbaiteStoneBlock>());
             }
         }

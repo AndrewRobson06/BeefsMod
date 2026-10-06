@@ -399,12 +399,17 @@ Items: {
 	}
 
 	ElbaiteStoneBlockItem: {
-		DisplayName: Elbaite Stone Block Item
+		DisplayName: Elbaite Stone Block
 		Tooltip: ""
 	}
 
 	LihzahrdGrenade: {
 		DisplayName: Lihzahrd Grenade
+		Tooltip: ""
+	}
+
+	ElbaiteItem: {
+		DisplayName: Elbaite
 		Tooltip: ""
 	}
 }

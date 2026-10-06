@@ -397,6 +397,16 @@ Items: {
 		DisplayName: Martian Grenade
 		Tooltip: Creates homing electrical bolts
 	}
+
+	ElbaiteStoneBlockItem: {
+		DisplayName: Elbaite Stone Block Item
+		Tooltip: ""
+	}
+
+	LihzahrdGrenade: {
+		DisplayName: Lihzahrd Grenade
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -448,8 +458,15 @@ Projectiles: {
 	MartianGrenadeHomingProjectile.DisplayName: Martian Grenade Homing Projectile
 }
 
-Tiles.ScarabiteOre.MapEntry: Scarabite Ore
-WorldGen.ScarabiteOrePassMessage: Mods.BeefsMod.WorldGen.ScarabiteOrePassMessage
+Tiles: {
+	ScarabiteOre.MapEntry: Scarabite Ore
+	ElbaiteStoneBlock.MapEntry: Elbaite Stone Block
+}
+
+WorldGen: {
+	ScarabiteOrePassMessage: Mods.BeefsMod.WorldGen.ScarabiteOrePassMessage
+	BlessedWithExampleOreMessage: Mods.BeefsMod.WorldGen.BlessedWithExampleOreMessage
+}
 
 Buffs: {
 	ScarabiteJavelinBuff: {

@@ -15,7 +15,7 @@ namespace BeefsMod.Content.Dusts
             dust.velocity *= 0.4f; // Multiply the dust's start velocity by 0.4, slowing it down
             dust.noGravity = false; // Makes the dust have gravity.
             dust.noLight = true; // Makes the dust emit no light.
-            dust.scale *= 1.5f; // Multiplies the dust's initial scale by 1.5.
+            dust.scale *= 1f; // Multiplies the dust's initial scale by 1.5.
         }
 
         public override bool Update(Dust dust)

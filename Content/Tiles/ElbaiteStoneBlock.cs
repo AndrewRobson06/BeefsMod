@@ -109,7 +109,7 @@ namespace BeefsMod.Content.Tiles
 
                 if (tile.HasTile && tile.TileType == TileID.Stone)
                     WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 13), WorldGen.genRand.Next(15, 25),
-                        ModContent.TileType<ScarabiteOre>());
+                        ModContent.TileType<ElbaiteStoneBlock>());
             }
         }
 

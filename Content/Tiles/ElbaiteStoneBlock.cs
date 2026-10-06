@@ -28,7 +28,7 @@ namespace BeefsMod.Content.Tiles
             {
                 Item.DefaultToPlaceableTile(ModContent.TileType<ElbaiteStoneBlock>());
                 Item.Size = new(12);
-                Item.value = Item.sellPrice(silver: 1);
+                Item.value = Item.sellPrice(silver: 45);
                 Item.rare = ItemRarityID.LightRed;
 
             }
@@ -46,7 +46,7 @@ namespace BeefsMod.Content.Tiles
             {
                 //Item.DefaultToPlaceableTile(ModContent.TileType<ScarabiteOre>());
                 Item.Size = new(12);
-                Item.value = Item.sellPrice(silver: 19);
+                Item.value = Item.sellPrice(silver: 45);
                 Item.rare = ItemRarityID.LightRed;
 
                 Item.maxStack = 9999;

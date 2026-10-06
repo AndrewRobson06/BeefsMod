@@ -412,6 +412,15 @@ Items: {
 		DisplayName: Elbaite
 		Tooltip: ""
 	}
+
+	ElbaiteAmulet: {
+		DisplayName: Elbaite Amulet
+		Tooltip: 			'''
+							Increases melee damage by 8%
+							Increases summon damage by 8%
+							Increases melee and whip attack speed by 8%
+							'''
+	}
 }
 
 Projectiles: {

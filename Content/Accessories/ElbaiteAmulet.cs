@@ -27,9 +27,9 @@ namespace BeefsMod.Content.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetDamage(DamageClass.Melee) += 0.08f;
-            player.GetDamage(DamageClass.Summon) += 0.08f;
-            player.GetAttackSpeed(DamageClass.Melee) += 0.08f;
+            player.GetDamage(DamageClass.Melee) += 8 / 100f;
+            player.GetDamage(DamageClass.Summon) += 8 / 100f;
+            player.GetAttackSpeed(DamageClass.Melee) += 8 / 100f;
             hideVisual = true;
         }
 

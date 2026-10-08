@@ -1,18 +1,19 @@
-﻿using System;
+﻿using BeefsMod.Content.Tiles;
+using BeefsMod.Content.Weapons.Melee.Projectiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Terraria.ModLoader;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
-using BeefsMod.Content.Tiles;
-using BeefsMod.Content.Weapons.Melee.Projectiles;
+using Terraria.ModLoader;
+using static BeefsMod.Content.Tiles.ElbaiteStoneBlock;
 
 namespace BeefsMod.Content.Weapons.Melee
 {
-    public class ScarabiteJaw : ModItem
+    public class ElbaiteSpear : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,24 +23,23 @@ namespace BeefsMod.Content.Weapons.Melee
 
         public override void SetDefaults()
         {
-            Item.rare = ItemRarityID.Yellow;
-            Item.value = Item.sellPrice(gold: 11, silver: 40);
+            Item.rare = ItemRarityID.LightRed;
+            Item.value = Item.sellPrice(gold: 11, silver: 76);
 
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.useAnimation = 30;
-            Item.useTime = 30;
+            Item.useAnimation = 40;
+            Item.useTime = 40;
             Item.UseSound = SoundID.Item71;
             Item.autoReuse = true;
 
-            Item.damage = 70;
-            Item.knockBack = 2.5f;
+            Item.damage = 66;
+            Item.knockBack = 3f;
             Item.noUseGraphic = true;
             Item.DamageType = DamageClass.Melee;
             Item.noMelee = true;
 
             Item.shootSpeed = 3.7f;
-            Item.shoot = ModContent.ProjectileType<ScarabiteJawProjectile>();
-            //Item.shoot = ModContent.ProjectileType<VenomSludgeBall>();
+            Item.shoot = ModContent.ProjectileType<ElbaiteSpearProjectile>();
         }
 
         public override bool CanUseItem(Player player)
@@ -60,7 +60,14 @@ namespace BeefsMod.Content.Weapons.Melee
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient<ScarabiteBarItem>(12)
+                .AddIngredient(ItemID.AdamantiteBar, 12)
+                .AddIngredient<ElbaiteItem>(8)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.TitaniumBar, 12)
+                .AddIngredient<ElbaiteItem>(8)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

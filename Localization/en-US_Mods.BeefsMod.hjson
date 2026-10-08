@@ -451,6 +451,11 @@ Items: {
 			Increases max number of minions by 1
 			'''
 	}
+
+	ElbaiteSpear: {
+		DisplayName: Elbaite Spear
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -500,6 +505,7 @@ Projectiles: {
 	MartianGrenadeExplosion.DisplayName: Martian Grenade Explosion
 	MartianGrenadeProjectile.DisplayName: Martian Grenade Projectile
 	MartianGrenadeHomingProjectile.DisplayName: Martian Grenade Homing Projectile
+	ElbaiteSpearProjectile.DisplayName: Elbaite Spear Projectile
 }
 
 Tiles: {

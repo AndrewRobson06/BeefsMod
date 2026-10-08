@@ -12,8 +12,8 @@ namespace BeefsMod.Content.Dusts
     {
         public override void OnSpawn(Dust dust)
         {
-            dust.velocity *= 0.4f; // Multiply the dust's start velocity by 0.4, slowing it down
-            dust.noGravity = false; // Makes the dust have gravity.
+            dust.velocity *= 0.8f; // Multiply the dust's start velocity by 0.4, slowing it down
+            dust.noGravity = true; // Makes the dust have gravity.
             dust.noLight = true; // Makes the dust emit no light.
             dust.scale *= 1f; // Multiplies the dust's initial scale by 1.5.
         }
@@ -28,7 +28,7 @@ namespace BeefsMod.Content.Dusts
 
             Lighting.AddLight(dust.position, light, light, light);
 
-            if (dust.scale < 0.5f)
+            if (dust.scale < 0.2f)
             {
                 dust.active = false;
             }

@@ -454,7 +454,12 @@ Items: {
 
 	ElbaiteSpear: {
 		DisplayName: Elbaite Spear
-		Tooltip: "Has a much further reach"
+		Tooltip: Has a much further reach
+	}
+
+	ElbaiteWhip: {
+		DisplayName: Elbaite Snap
+		Tooltip: "'A rather... unfortunate shape"
 	}
 }
 
@@ -506,6 +511,7 @@ Projectiles: {
 	MartianGrenadeProjectile.DisplayName: Martian Grenade Projectile
 	MartianGrenadeHomingProjectile.DisplayName: Martian Grenade Homing Projectile
 	ElbaiteSpearProjectile.DisplayName: Elbaite Spear Projectile
+	ElbaiteWhipProjectile.DisplayName: Elbaite Whip Projectile
 }
 
 Tiles: {
@@ -537,6 +543,11 @@ Buffs: {
 	ElbaiteTagBuff: {
 		DisplayName: Elbaite Tag Buff
 		Description: Mods.BeefsMod.Buffs.ElbaiteTagBuff.Description
+	}
+
+	ElbaiteWhipTag: {
+		DisplayName: Elbaite Whip Tag
+		Description: Mods.BeefsMod.Buffs.ElbaiteWhipTag.Description
 	}
 }
 

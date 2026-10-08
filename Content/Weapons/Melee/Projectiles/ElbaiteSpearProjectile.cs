@@ -15,10 +15,10 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
 {
     public class ElbaiteSpearProjectile : ModProjectile
     {
-        protected virtual float HoldoutRangeMin => 24f;
+        protected virtual float HoldoutRangeMin => 30f;
         protected virtual float HoldoutRangeMax => 240f;
 
-        public float rotation = 0;
+        //public float rotation = Projectile.velocity.Length() * 0.1f;
 
         public override void SetDefaults()
         {
@@ -77,11 +77,10 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
         }
         public override void PostDraw(Color lightColor) //something is making the players arm glow??? idk what but fix it later
         {
+            float rotation = Projectile.velocity.Length() * 0.1f;
 
-            rotation++;
+            rotation *= 0.5f;
 
-            if (rotation > 360)
-                rotation = 0;
 
             Main.instance.LoadProjectile(79);
             //Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;

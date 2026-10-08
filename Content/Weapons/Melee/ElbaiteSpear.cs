@@ -19,6 +19,8 @@ namespace BeefsMod.Content.Weapons.Melee
         {
             ItemID.Sets.SkipsInitialUseSound[Type] = true;
             ItemID.Sets.Spears[Type] = true;
+            Item.width = 48;
+            Item.height = 48;
         }
 
         public override void SetDefaults()

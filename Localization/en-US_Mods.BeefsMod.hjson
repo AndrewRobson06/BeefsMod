@@ -454,7 +454,7 @@ Items: {
 
 	ElbaiteSpear: {
 		DisplayName: Elbaite Spear
-		Tooltip: ""
+		Tooltip: "Has a much further reach"
 	}
 }
 

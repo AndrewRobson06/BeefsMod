@@ -18,7 +18,7 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
         protected virtual float HoldoutRangeMin => 30f;
         protected virtual float HoldoutRangeMax => 240f;
 
-        //public float rotation = Projectile.velocity.Length() * 0.1f;
+        public float rotation = 0;
 
         public override void SetDefaults()
         {
@@ -75,24 +75,41 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
             return false;
 
         }
+
+        public override void PostAI()
+        {
+            rotation += 0.3f;
+
+            //Projectile.rotation += Projectile.velocity.Length() * 0.1f;
+
+            if (rotation > 360)
+                rotation = 0;
+        }
         public override void PostDraw(Color lightColor) //something is making the players arm glow??? idk what but fix it later
         {
-            float rotation = Projectile.velocity.Length() * 0.1f;
+            //float rotation = Projectile.velocity.Length() * 0.1f;
 
-            rotation *= 0.5f;
+            //rotation *= 0.5f;
 
 
             Main.instance.LoadProjectile(79);
             //Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
             Texture2D starTex = TextureAssets.Projectile[79].Value;
+            //Texture2D bloomTex = TextureAssets.Projectile[580].Value;
             //Texture2D bloomTex = TextureAssets.Projectile[540].Value;
 
             //Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition, null, lightColor, 0, tex.Size() / 2f, Projectile.scale, 0f, 0f);
 
 
             {
-                //Main.spriteBatch.End();
-                //Main.spriteBatch.Begin((SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix));
+                Main.EntitySpriteDraw(starTex, Projectile.Center - new Vector2(0, 0).RotatedBy(0) - Main.screenPosition,
+                     null, Color.White, rotation, starTex.Size() / 2f, 1.2f, 0f, 0f);
+                Main.EntitySpriteDraw(starTex, Projectile.Center - new Vector2(0, 0).RotatedBy(0) - Main.screenPosition,
+                    null, new Color(185, 65, 101, 255), rotation, starTex.Size() / 2f, 0.8f, 0f, 0f);
+                Main.EntitySpriteDraw(starTex, Projectile.Center - new Vector2(0, 0).RotatedBy(0) - Main.screenPosition,
+                    null, new Color(128, 41, 67, 255), rotation, starTex.Size() / 2f, 0.3f, 0f, 0f);
+                /*Main.spriteBatch.End();
+                Main.spriteBatch.Begin((SpriteSortMode.Immediate,BlendState.AlphaBlend,SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix));
 
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(0, 0).RotatedBy(rotation) - Main.screenPosition,
                     null, new Color(185, 65, 101, 255), 0, starTex.Size() / 2f, 0.8f, 0f, 0f);
@@ -102,9 +119,9 @@ namespace BeefsMod.Content.Weapons.Melee.Projectiles
                 /*Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, -5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
                     null, new Color(255, 0, 131, 255), 0, starTex.Size() / 2f, 0.8f, 0f, 0f);
                 Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(7, -5).RotatedBy(Projectile.rotation / 10) - Main.screenPosition,
-                    null, new Color(204, 56, 132, 255), 0, starTex.Size() / 2f, 0.5f, 0f, 0f);*/
+                    null, new Color(204, 56, 132, 255), 0, starTex.Size() / 2f, 0.5f, 0f, 0f);
 
-                //Main.spriteBatch.End();
+                Main.spriteBatch.End();*/
                 //Main.spriteBatch.Begin(default, default, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
             }
         }

@@ -13,7 +13,7 @@ namespace BeefsMod.Content.Items.Armor
     [AutoloadEquip(EquipType.Legs)]
     public class ElbaiteLegs : ModItem
     {
-        public override string Texture => "BeefsMod/Content/Placeholder";
+        //public override string Texture => "BeefsMod/Content/Placeholder";
         public static readonly int AttackSpeedBonus = 12;
         public override void SetDefaults()
         {

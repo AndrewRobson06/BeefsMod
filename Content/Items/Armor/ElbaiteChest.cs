@@ -14,7 +14,7 @@ namespace BeefsMod.Content.Items.Armor
     [AutoloadEquip(EquipType.Body)]
     public class ElbaiteChest : ModItem
     {
-        public override string Texture => "BeefsMod/Content/Placeholder";
+        //public override string Texture => "BeefsMod/Content/Placeholder";
         public static readonly int DamageBonus = 8;
         public override void SetDefaults()
         {

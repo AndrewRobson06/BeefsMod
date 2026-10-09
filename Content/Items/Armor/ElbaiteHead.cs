@@ -15,7 +15,7 @@ namespace BeefsMod.Content.Items.Armor
     [AutoloadEquip(EquipType.Head)]
     public class ElbaiteHead : ModItem
     {
-        public override string Texture => "BeefsMod/Content/Placeholder";
+        //public override string Texture => "BeefsMod/Content/Placeholder";
 
         public static readonly int AttackSpeedBonus = 6;
 

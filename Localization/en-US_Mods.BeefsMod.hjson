@@ -459,7 +459,10 @@ Items: {
 
 	ElbaiteWhip: {
 		DisplayName: Elbaite Snap
-		Tooltip: "'A rather... unfortunate shape"
+		Tooltip: '''
+		6 summon tag damage
+					'A rather... unfortunate shape'
+					'''
 	}
 }
 

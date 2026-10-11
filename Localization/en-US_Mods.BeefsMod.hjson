@@ -465,6 +465,11 @@ Items: {
 			'A rather... unfortunate shape'
 			'''
 	}
+
+	ElbaiteTorch: {
+		DisplayName: Elbaite Torch
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

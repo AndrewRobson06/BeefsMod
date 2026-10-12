@@ -526,6 +526,7 @@ Projectiles: {
 Tiles: {
 	ScarabiteOre.MapEntry: Scarabite Ore
 	ElbaiteStoneBlock.MapEntry: Elbaite Stone Block
+	ExposedElbaite.MapEntry: Exposed Elbaite
 }
 
 WorldGen: {

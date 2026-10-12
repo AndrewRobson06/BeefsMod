@@ -40,6 +40,7 @@ namespace BeefsMod.Content.Tiles
             {
                 Item.ResearchUnlockCount = 100;
                 ItemID.Sets.SortingPriorityMaterials[Type] = 58;
+                Item.DefaultToPlaceableTile(ModContent.TileType<ExposedElbaite>());
             }
 
             public override void SetDefaults()

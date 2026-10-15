@@ -494,6 +494,11 @@ Items: {
 		DisplayName: Pargasite Burst
 		Tooltip: ""
 	}
+
+	PargasiteBow: {
+		DisplayName: Pargasite Bow
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

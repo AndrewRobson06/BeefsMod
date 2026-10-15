@@ -54,7 +54,7 @@ namespace BeefsMod.Content.Weapons.Magic
 
             for (int i = 0; i < NumProjectiles; i++)
             {
-                Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+                Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(8));
 
                 newVelocity *= 1f - Main.rand.NextFloat(0.3f);
 

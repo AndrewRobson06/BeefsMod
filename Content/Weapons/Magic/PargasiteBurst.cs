@@ -10,6 +10,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static BeefsMod.Content.Tiles.PargasiteStoneBlock;
 
 namespace BeefsMod.Content.Weapons.Magic
 {
@@ -27,16 +28,16 @@ namespace BeefsMod.Content.Weapons.Magic
 
             Item.rare = ItemRarityID.LightRed;
 
-            Item.useTime = 8;
+            Item.useTime = 16;
             Item.useAnimation = 16;
             Item.useStyle = ItemUseStyleID.Shoot;
             //Item.reuseDelay = 50;
             //Item.consumeAmmoOnLastShotOnly = true;
             Item.autoReuse = false;
-            Item.UseSound = SoundID.Item36;
+            //Item.UseSound = SoundID.Item36;
 
             Item.DamageType = DamageClass.Magic;
-            Item.damage = 18;
+            Item.damage = 23;
             Item.knockBack = 6f;
             Item.noMelee = true;
 
@@ -47,9 +48,9 @@ namespace BeefsMod.Content.Weapons.Magic
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-           SoundEngine.PlaySound(SoundID.Item38 with { Volume = 0.7f });
+           SoundEngine.PlaySound(SoundID.Item43 with { Volume = 0.7f });
 
-            int NumProjectiles = Main.rand.Next(4, 5);
+            int NumProjectiles = Main.rand.Next(3, 4);
 
             for (int i = 0; i < NumProjectiles; i++)
             {
@@ -76,14 +77,7 @@ namespace BeefsMod.Content.Weapons.Magic
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Boomstick)
-                .AddIngredient(ItemID.MythrilBar, 12)
-                .AddTile(TileID.MythrilAnvil)
-                .Register();
-
-            CreateRecipe()
-                .AddIngredient(ItemID.Boomstick)
-                .AddIngredient(ItemID.OrichalcumBar, 12)
+                .AddIngredient(ModContent.ItemType<PargasiteItem>(), 15)
                 .AddTile(TileID.MythrilAnvil)
                 .Register();
         }

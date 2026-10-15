@@ -1,6 +1,7 @@
 ﻿using BeefsMod.Content.Dusts;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading;
 using Terraria;
 using Terraria.Chat;
@@ -40,7 +41,7 @@ namespace BeefsMod.Content.Tiles
             {
                 Item.ResearchUnlockCount = 100;
                 ItemID.Sets.SortingPriorityMaterials[Type] = 58;
-                Item.DefaultToPlaceableTile(ModContent.TileType<ExposedElbaite>());
+                //Item.DefaultToPlaceableTile(ModContent.TileType<ExposedElbaite>());
             }
 
             public override void SetDefaults()
@@ -67,7 +68,7 @@ namespace BeefsMod.Content.Tiles
             Main.tileMergeDirt[Type] = true;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
-            
+
 
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(128, 41, 67), name);
@@ -132,7 +133,7 @@ namespace BeefsMod.Content.Tiles
                 Tile tile = Framing.GetTileSafely(x, y);
 
                 if (tile.HasTile && tile.TileType == TileID.Stone)
-                    WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 5), WorldGen.genRand.Next(2, 5),
+                    WorldGen.TileRunner(x, y, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 5),
                         ModContent.TileType<ElbaiteStoneBlock>());
             }
         }

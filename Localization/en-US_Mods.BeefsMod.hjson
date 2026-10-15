@@ -470,6 +470,16 @@ Items: {
 		DisplayName: Elbaite Torch
 		Tooltip: ""
 	}
+
+	PargasiteItem: {
+		DisplayName: Pargasite
+		Tooltip: ""
+	}
+
+	PargasiteStoneBlockItem: {
+		DisplayName: Pargasite Stone Block
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -527,6 +537,7 @@ Tiles: {
 	ScarabiteOre.MapEntry: Scarabite Ore
 	ElbaiteStoneBlock.MapEntry: Elbaite Stone Block
 	ExposedElbaite.MapEntry: Exposed Elbaite
+	PargasiteStoneBlock.MapEntry: Pargasite Stone Block
 }
 
 WorldGen: {

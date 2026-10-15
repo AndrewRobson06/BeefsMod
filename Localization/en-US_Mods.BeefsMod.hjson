@@ -483,10 +483,16 @@ Items: {
 
 	PargasiteCharm: {
 		DisplayName: Pargasite Charm
-		Tooltip: '''
-		 12% reduced mana cost	
-		 10% chance to save ammo
-		 '''
+		Tooltip:
+			'''
+			12% reduced mana cost	
+			10% chance to save ammo
+			'''
+	}
+
+	PargasiteBurst: {
+		DisplayName: Pargasite Burst
+		Tooltip: ""
 	}
 }
 
@@ -539,6 +545,7 @@ Projectiles: {
 	MartianGrenadeHomingProjectile.DisplayName: Martian Grenade Homing Projectile
 	ElbaiteSpearProjectile.DisplayName: Elbaite Spear Projectile
 	ElbaiteWhipProjectile.DisplayName: Elbaite Whip Projectile
+	PargasiteBurstProjectile.DisplayName: Pargasite Burst Projectile
 }
 
 Tiles: {

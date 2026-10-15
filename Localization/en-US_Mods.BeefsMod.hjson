@@ -480,6 +480,14 @@ Items: {
 		DisplayName: Pargasite Stone Block
 		Tooltip: ""
 	}
+
+	PargasiteCharm: {
+		DisplayName: Pargasite Charm
+		Tooltip: '''
+		 12% reduced mana cost	
+		 10% chance to save ammo
+		 '''
+	}
 }
 
 Projectiles: {

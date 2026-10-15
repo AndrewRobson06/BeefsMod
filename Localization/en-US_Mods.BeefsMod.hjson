@@ -497,7 +497,7 @@ Items: {
 
 	PargasiteBow: {
 		DisplayName: Pargasite Bow
-		Tooltip: ""
+		Tooltip: "Shoots in a 2 shot burst"
 	}
 }
 

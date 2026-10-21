@@ -497,7 +497,7 @@ Items: {
 
 	PargasiteBow: {
 		DisplayName: Pargasite Bow
-		Tooltip: "Shoots in a 2 shot burst"
+		Tooltip: Shoots in a 2 shot burst
 	}
 }
 
@@ -554,10 +554,10 @@ Projectiles: {
 }
 
 Tiles: {
-	ScarabiteOre.MapEntry: Scarabite Ore
-	ElbaiteStoneBlock.MapEntry: Elbaite Stone Block
+	ScarabiteOre.MapEntry: Scarabite
+	ElbaiteStoneBlock.MapEntry: Elbaite
 	ExposedElbaite.MapEntry: Exposed Elbaite
-	PargasiteStoneBlock.MapEntry: Pargasite Stone Block
+	PargasiteStoneBlock.MapEntry: Pargasite
 }
 
 WorldGen: {

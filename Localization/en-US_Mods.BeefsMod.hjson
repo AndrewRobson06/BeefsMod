@@ -499,6 +499,11 @@ Items: {
 		DisplayName: Pargasite Bow
 		Tooltip: Shoots in a 2 shot burst
 	}
+
+	PargasiteGun: {
+		DisplayName: Pargasite Hand Cannon
+		Tooltip: "Alternates burst size"
+	}
 }
 
 Projectiles: {

@@ -502,7 +502,18 @@ Items: {
 
 	PargasiteGun: {
 		DisplayName: Pargasite Hand Cannon
-		Tooltip: "Alternates burst size"
+		Tooltip: Alternates burst size
+	}
+
+	GlassCharm: {
+		DisplayName: Glass Charm
+		Tooltip:
+			'''
+			25% increased damage
+			10% increased critical strike chance
+			55% ncreased damage taken by enemies
+			-20 defence
+			'''
 	}
 }
 

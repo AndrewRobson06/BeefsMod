@@ -511,8 +511,19 @@ Items: {
 			'''
 			25% increased damage
 			10% increased critical strike chance
-			55% ncreased damage taken by enemies
+			55% reduced damage reduction
 			-20 defence
+			'''
+	}
+
+	GlassCannon: {
+		DisplayName: Glass Cannon
+		Tooltip: 			'''
+			50% increased damage
+			15% increased critical strike chance
+			100% reduced damage reduction
+			-40 defence
+			You are unable to use healing potions
 			'''
 	}
 }

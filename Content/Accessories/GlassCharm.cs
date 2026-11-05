@@ -6,18 +6,17 @@ namespace BeefsMod.Content.Accessories
 {
     public class GlassCharm : ModItem
     {
-        public override string Texture => "BeefsMod/Content/Placeholder";
         public float DamageBonus = 25;
         public int CritBonus = 10;
         public float DamageTakenIncrease = -55;
             public override void SetDefaults()
             {
-                Item.width = 36;
-                Item.height = 38;
+                Item.width = 28;
+                Item.height = 44;
 
                 Item.value = Item.sellPrice(silver: 60);
 
-                Item.rare = ItemRarityID.Blue;
+                Item.rare = ItemRarityID.LightRed;
 
                 Item.accessory = true;
                 Item.defense = -20;

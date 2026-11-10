@@ -518,13 +518,19 @@ Items: {
 
 	GlassCannon: {
 		DisplayName: Glass Cannon
-		Tooltip: 			'''
+		Tooltip:
+			'''
 			50% increased damage
 			15% increased critical strike chance
 			100% reduced damage reduction
 			-40 defence
 			You are unable to use healing potions
 			'''
+	}
+
+	CarnyLife: {
+		DisplayName: Carny Life
+		Tooltip: ""
 	}
 }
 
@@ -578,6 +584,7 @@ Projectiles: {
 	ElbaiteSpearProjectile.DisplayName: Elbaite Spear Projectile
 	ElbaiteWhipProjectile.DisplayName: Elbaite Whip Projectile
 	PargasiteBurstProjectile.DisplayName: Pargasite Burst Projectile
+	CarnyLifeProjectile.DisplayName: Carny Life Projectile
 }
 
 Tiles: {

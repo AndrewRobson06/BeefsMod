@@ -37,5 +37,6 @@ namespace BeefsMod.Content.Weapons.Magic
             Item.mana = 9;
         }
 
+
     }
 }

@@ -1,11 +1,13 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -31,12 +33,24 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             Projectile.localNPCHitCooldown = 1;
         }
 
-        public override bool PreDraw(ref Color lightColor)
+        public override void AI()
         {
-            Main.EntitySpriteDraw(default, Projectile.Center - new Vector2(0, 0).RotatedBy(0) - Main.screenPosition,
-                null, Color.White, 5, default, 1.2f, 0f, 0f);
+            Projectile.rotation ++;
+        }
 
+        public override bool? CanHitNPC(NPC target)
+        {
             return false;
         }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D texture = TextureAssets.Projectile[Type].Value;
+
+            Main.spriteBatch.Draw(texture, Projectile.Center - new Vector2(-20, -25) - Main.screenPosition,
+                    null, default, Projectile.rotation, texture.Size() / 2f, 1f, 0f, 0f);
+            return false;
+        }
+
     }
 }

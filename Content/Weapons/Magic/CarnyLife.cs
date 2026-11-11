@@ -38,5 +38,6 @@ namespace BeefsMod.Content.Weapons.Magic
         }
 
 
+
     }
 }

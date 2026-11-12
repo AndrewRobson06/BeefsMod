@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static BeefsMod.Content.Weapons.Magic.SpinUseStylePlayer;
@@ -31,14 +33,22 @@ namespace BeefsMod.Content.Weapons.Magic
 
             Item.useStyle = SpinUseStyleGlobalItem.SpinUseStyle;
 
-            Item.shootSpeed = 25f;
+            Item.shootSpeed = 15f;
+            Item.UseSound = SoundID.Item1;
+
+            //SoundEngine.PlaySound(SoundID.Item109);
+            Item.shoot = ProjectileID.PurificationPowder; //i dunno why but do this
             //Item.shoot = ModContent.ProjectileType<CarnyLifeProjectile>();
         }
 
-        /*public override bool CanUseItem(Player player)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            return player.ownedProjectileCounts[Item.shoot] < 1;
-        }*/
+            SoundEngine.PlaySound(SoundID.Item4 with { Volume = 0.3f });
+
+            Projectile.NewProjectileDirect(source, position, velocity, ModContent.ProjectileType<CarnyLifeProjectile>(), damage, knockback, player.whoAmI);
+            
+            return false;
+        }
 
     }
 
@@ -172,42 +182,8 @@ namespace BeefsMod.Content.Weapons.Magic
 
                 // This FlipItemLocationAndRotationForGravity method handles adjusting itemRotation and itemLocation to account for reversed gravity.
                 player.FlipItemLocationAndRotationForGravity();
-                /* This is what the method does:
-                if (player.gravDir == -1f) {
-                    player.itemRotation = 0f - player.itemRotation;
-                    player.itemLocation.Y = player.position.Y + (float)player.height + (player.position.Y - player.itemLocation.Y);
-                }
-                */
             }
 
-            /*public override void UseItemHitbox(Item item, Player player, ref Rectangle hitbox, ref bool noHitbox)
-            {
-                // Calculate the direction of the hand
-                Vector2 handDirection = (player.compositeFrontArm.rotation + MathHelper.PiOver2).ToRotationVector2() * player.gravDir;
-
-                // Calculate the item hitbox. The hitbox parameter passed in already has item scale applied so recalculating it here is more flexible.
-                Rectangle drawHitbox = Item.GetDrawHitbox(item.type, player);
-                Vector2 itemSize = Main.dedServ ? new Vector2(32) : new Vector2(drawHitbox.Width, drawHitbox.Height);
-
-                // Calculate the distance from the handle to the tip of the weapon, taking into account item scaling effects.
-                float itemLength = (itemSize * player.GetAdjustedItemScale(item)).Length(); // We don't use Item.Size/width/height because those values are for the item hitbox when dropped.
-
-                // Calculate the handle and tip positions
-                Vector2 handlePosition = handDirection * new Vector2(SpinUseStyleItemSets.HandOffsets[item.type]) + player.MountedCenter;
-                Vector2 tipPosition = handlePosition + handDirection * itemLength;
-
-                // Now we use those values to create the item hitbox
-                hitbox = Utils.CornerRectangle(handlePosition.ToPoint(), tipPosition.ToPoint());
-                hitbox.Inflate(1, 1); // Make the hitbox slightly bigger.
-            }
-
-            // We use UseItemFrame to drive the player animation during the weapon animation
-            public override void UseItemFrame(Item item, Player player)
-            {
-                // Even though we are using SetCompositeArmFront to set the arm animation, we still need to set player.bodyFrame.Y to appropriate values to avoid visual issues in rare situations.
-                // One example is animating attacks during the wolf transformation (Lilith's Necklace)
-                player.bodyFrame.Y = player.bodyFrame.Height;
-            }*/
         }
 
     }

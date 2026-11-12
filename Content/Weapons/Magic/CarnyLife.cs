@@ -11,6 +11,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
+//test
 namespace BeefsMod.Content.Weapons.Magic
 {
     public class CarnyLife : ModItem

@@ -530,11 +530,11 @@ Items: {
 
 	CarnyLife: {
 		DisplayName: Carny Life
-		Tooltip: '''
-				'Let's contribute to the chaos!'
-				[c/FF9900:(Dedicated Item)]
-				'''
-
+		Tooltip:
+			'''
+			'Let's contribute to the chaos!'
+			[c/FF9900:(Dedicated Item)]
+			'''
 	}
 }
 

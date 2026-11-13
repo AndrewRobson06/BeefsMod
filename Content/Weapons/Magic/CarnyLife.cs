@@ -43,7 +43,7 @@ namespace BeefsMod.Content.Weapons.Magic
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            SoundEngine.PlaySound(SoundID.Item4 with { Volume = 0.3f });
+            SoundEngine.PlaySound(SoundID.Item4 with { Volume = 0.4f });
 
             Projectile.NewProjectileDirect(source, position, velocity, ModContent.ProjectileType<CarnyLifeProjectile>(), damage, knockback, player.whoAmI);
             

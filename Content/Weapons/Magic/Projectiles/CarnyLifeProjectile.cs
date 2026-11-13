@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BeefsMod.Content.Dusts;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using rail;
 using System;
@@ -24,8 +25,8 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
         }
         public override void SetDefaults()
         {
-            Projectile.width = 15; // The width of projectile hitbox
-            Projectile.height = 15; // The height of projectile hitbox
+            //Projectile.width = 30; // The width of projectile hitbox
+            //Projectile.height = 30; // The height of projectile hitbox
             //Projectile.aiStyle = ProjAIStyleID.Arrow; // The ai style of the projectile, please reference the source code of Terraria
             Projectile.friendly = true; // Can the projectile deal damage to enemies?
             Projectile.hostile = false; // Can the projectile deal damage to the player?
@@ -38,7 +39,8 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 1;
-            Projectile.scale = 0.5f;
+            Projectile.Size = new Vector2(30);
+            Projectile.scale = 0.7f;
 
 
 
@@ -48,6 +50,17 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
         public override void AI()
         {
             float maxDetectRadius = 250f;
+
+            //Projectile.rotation += 0.3f;
+
+            if (Main.rand.NextBool(2))
+            {
+                int d = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.BoneTorch);
+
+                Dust dust = Main.dust[d];
+
+                dust.noGravity = true;
+            }
 
             if (HomingTarget == null && CanLockOn == false)
             {
@@ -147,6 +160,13 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             Projectile.penetrate--;
             if (Projectile.penetrate <= 0)
             {
+                for (int i = 0; i < 10; i++)
+                {
+                    Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 10f));
+
+                    Dust.NewDustPerfect(Projectile.Center, DustID.BoneTorch, velocity * 2f, 0, default, 1.5f).noGravity = true;
+                }
+
                 SoundEngine.PlaySound(SoundID.Item110, Projectile.position);
                 Projectile.Kill();
             }
@@ -160,6 +180,8 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
                 if (Projectile.velocity.Y != oldVelocity.Y)
                 {
                     Projectile.velocity.Y = -oldVelocity.Y;
+
+                    // so it gets an extra bit of hight after hitting the floor late
                     if (Projectile.velocity.Y < 0)
                     {
                         Projectile.velocity.Y += -6;
@@ -175,14 +197,54 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
                 CanLockOn = true;
 
                 SoundEngine.PlaySound(SoundID.Item110, Projectile.position);
+
+                for (int i = 0; i < 10; i++)
+                {
+                    Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 10f));
+
+                    Dust.NewDustPerfect(Projectile.Center, DustID.BoneTorch, velocity * 2f, 0, default, 1.5f).noGravity = true;
+                }
             }
             return false;
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            for (int i = 0; i < 10; i++)
+            {
+                Vector2 velocity = Vector2.One.RotatedBy(MathHelper.TwoPi * (i / 10f));
+
+                Dust.NewDustPerfect(Projectile.Center, DustID.BoneTorch, velocity * 2f, 0, default, 1.5f).noGravity = true;
+            }
+
+            SoundEngine.PlaySound(SoundID.Item110, Projectile.position);
+
             Projectile.Kill();
         }
+
+
+        /*public override bool PreDraw(ref Color lightColor)
+        {
+            Main.instance.LoadProjectile(79);
+            Texture2D starTex = TextureAssets.Projectile[79].Value;
+            Texture2D tex = ModContent.Request<Texture2D>(Texture).Value;
+
+            Main.spriteBatch.End();
+            Main.spriteBatch.Begin(default, BlendState.Additive, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
+
+            Main.spriteBatch.Draw(tex, Projectile.Center - Main.screenPosition, null, lightColor * 2, Projectile.rotation, tex.Size() / 2f, Projectile.scale, 0f, 0f);
+
+            Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2(0, -10).RotatedBy(Projectile.rotation) - Main.screenPosition,
+                    null, new Color(142, 93, 117, 500), Projectile.rotation, starTex.Size(), 0.6f, 0f, 0f);
+
+            Main.spriteBatch.Draw(starTex, Projectile.Center - new Vector2().RotatedBy(Projectile.rotation) - Main.screenPosition,
+                null, new Color(141, 183, 213, 500), Projectile.rotation, starTex.Size(), 0.4f, 0f, 0f);
+
+            Main.spriteBatch.End();
+            Main.spriteBatch.Begin(default, default, default, default, default, null, Main.GameViewMatrix.TransformationMatrix);
+
+            return false;
+        }*/
 
     }
 }

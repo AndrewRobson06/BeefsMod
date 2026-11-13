@@ -47,8 +47,9 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
 
         public override void AI()
         {
+            //if (Projectile.ai[Type] == 0)
             Projectile.velocity.Y += Projectile.ai[0];
-            float maxDetectRadius = 400f;
+            float maxDetectRadius = 4000f;
 
             if (Projectile.timeLeft < 580)
                 Projectile.velocity.Y += 0.50f;
@@ -59,19 +60,19 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             if (CanLockOn == true)
             {
                 // First, we find a homing target if we don't have one
-                if (HomingTarget == null && CanLockOn == true)
+                if (HomingTarget == null)
                 {
                     HomingTarget = FindClosestNPC(maxDetectRadius);
                 }
 
                 // If we have a homing target, make sure it is still valid. If the NPC dies or moves away, we'll want to find a new target
-                if (HomingTarget != null && !IsValidTarget(HomingTarget) && CanLockOn == true)
+                if (HomingTarget != null && !IsValidTarget(HomingTarget))
                 {
                     HomingTarget = null;
                 }
 
                 // If we don't have a target, don't adjust trajectory
-                if (HomingTarget == null && CanLockOn == false)
+                if (HomingTarget == null)
                     return;
 
                 // If found, we rotate the projectile velocity in the direction of the target.
@@ -142,6 +143,7 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
                 if (Projectile.velocity.Y != oldVelocity.Y)
                 {
                     Projectile.velocity.Y = -oldVelocity.Y;
+                    //Projectile.velocity.Y += 20;
                 }
                 Projectile.velocity *= 0.75f;
                 Projectile.ai[0] = Projectile.ai[1];

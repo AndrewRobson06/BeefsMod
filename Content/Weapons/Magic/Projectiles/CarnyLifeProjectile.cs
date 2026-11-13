@@ -47,15 +47,29 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
 
         public override void AI()
         {
-            //if (Projectile.ai[Type] == 0)
-            Projectile.velocity.Y += Projectile.ai[0];
-            float maxDetectRadius = 4000f;
+            float maxDetectRadius = 250f;
 
-            if (Projectile.timeLeft < 580)
-                Projectile.velocity.Y += 0.50f;
+            if (HomingTarget == null && CanLockOn == false)
+            {
+                Projectile.velocity.Y += Projectile.ai[0];
 
-            if (Projectile.velocity.Y > 16f)
-                Projectile.velocity.Y = 16f;
+                if (Projectile.timeLeft < 580)
+                    Projectile.velocity.Y += 0.50f;
+
+                if (Projectile.velocity.Y > 12f)
+                    Projectile.velocity.Y = 12f;
+
+            } else if (HomingTarget == null & CanLockOn == true)
+            {
+                Projectile.velocity.Y += Projectile.ai[0];
+
+                if (Projectile.timeLeft < 580)
+                    Projectile.velocity.Y += 0.50f;
+
+                if (Projectile.velocity.Y > 12f)
+                    Projectile.velocity.Y = 12f;
+            }
+
 
             if (CanLockOn == true)
             {
@@ -79,10 +93,12 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
                 // We only rotate by 3 degrees an update to give it a smooth trajectory. Increase the rotation speed here to make tighter turns
                 float length = Projectile.velocity.Length();
                 float targetAngle = Projectile.AngleTo(HomingTarget.Center);
-                Projectile.velocity = Projectile.velocity.ToRotation().AngleTowards(targetAngle, MathHelper.ToRadians(3)).ToRotationVector2() * length;
+                Projectile.velocity = Projectile.velocity.ToRotation().AngleTowards(targetAngle, MathHelper.ToRadians(90)).ToRotationVector2() * length * 1.05f;
                 Projectile.rotation = Projectile.velocity.ToRotation();
             }
+            
         }
+        
 
         // Finding the closest NPC to attack within maxDetectDistance range
         // If not found then returns null
@@ -131,6 +147,7 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             Projectile.penetrate--;
             if (Projectile.penetrate <= 0)
             {
+                SoundEngine.PlaySound(SoundID.Item110, Projectile.position);
                 Projectile.Kill();
             }
             else
@@ -143,7 +160,15 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
                 if (Projectile.velocity.Y != oldVelocity.Y)
                 {
                     Projectile.velocity.Y = -oldVelocity.Y;
-                    //Projectile.velocity.Y += 20;
+                    if (Projectile.velocity.Y < 0)
+                    {
+                        Projectile.velocity.Y += -6;
+                    }
+                    else
+                    {
+                        Projectile.velocity.Y += 6;
+                    }
+                    
                 }
                 Projectile.velocity *= 0.75f;
                 Projectile.ai[0] = Projectile.ai[1];

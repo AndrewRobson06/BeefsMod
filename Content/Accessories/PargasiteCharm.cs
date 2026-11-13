@@ -13,6 +13,8 @@ namespace BeefsMod.Content.Accessories
     public class PargasiteCharm : ModItem
     {
         public static readonly int ManaCostReductionPercent = 12;
+
+        public static readonly int CritBonus = 5;
         public override void SetDefaults()
         {
             Item.width = 42;
@@ -29,6 +31,8 @@ namespace BeefsMod.Content.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.manaCost -= ManaCostReductionPercent / 100f;
+            player.GetCritChance(DamageClass.Ranged) += CritBonus; //5%
+            player.GetCritChance(DamageClass.Magic) += CritBonus; //5%
             player.huntressAmmoCost90 = true;
             hideVisual = true;
         }

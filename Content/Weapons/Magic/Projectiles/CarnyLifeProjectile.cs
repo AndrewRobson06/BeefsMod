@@ -29,7 +29,7 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             //Projectile.alpha = 255; // The transparency of the projectile, 255 for completely transparent. (aiStyle 1 quickly fades the projectile in) Make sure to delete this if you aren't using an aiStyle that fades in. You'll wonder why your projectile is invisible.
             //Projectile.light = 0.5f; // How much light emit around the projectile
             Projectile.ignoreWater = true; // Does the projectile's speed be influenced by water?
-            Projectile.tileCollide = false; // Can the projectile collide with tiles?
+            Projectile.tileCollide = true; // Can the projectile collide with tiles?
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 1;
             Projectile.scale = 0.5f;
@@ -37,6 +37,15 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
 
 
             AIType = ProjectileID.Bullet; // Act exactly like default Bullet
+        }
+
+        public override void AI()
+        {
+            if (Projectile.timeLeft < 580)
+                Projectile.velocity.Y += 0.50f;
+
+            if (Projectile.velocity.Y > 16f)
+                Projectile.velocity.Y = 16f;
         }
 
     }

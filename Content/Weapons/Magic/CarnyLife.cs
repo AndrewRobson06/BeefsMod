@@ -31,7 +31,7 @@ namespace BeefsMod.Content.Weapons.Magic
             //Item.noUseGraphic = true;
             Item.channel = true;
             Item.autoReuse = true;
-
+            
             Item.useStyle = SpinUseStyleGlobalItem.SpinUseStyle;
 
             Item.shootSpeed = 15f;

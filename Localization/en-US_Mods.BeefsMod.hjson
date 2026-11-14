@@ -533,6 +533,7 @@ Items: {
 		DisplayName: Carny Life
 		Tooltip:
 			'''
+			Projectiles gain homing after a bounce
 			'Let's contribute to the chaos!'
 			[c/FF9900:(Dedicated Item)]
 			'''

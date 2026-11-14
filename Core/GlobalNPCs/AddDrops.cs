@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.ItemDropRules;
 using BeefsMod.Content.Weapons.Summon;
 using BeefsMod.Content.Weapons.Ranged;
+using BeefsMod.Content.Weapons.Magic;
 
 namespace BeefsMod.Core.GlobalNPCs
 {
@@ -57,6 +58,9 @@ namespace BeefsMod.Core.GlobalNPCs
 
             if (npc.type == NPCID.MartianSaucer)
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MartianGrenade>(), 10, 1, 1));
+
+            if (npc.type == NPCID.Unicorn)
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CarnyLife>(), 20, 1, 1));
 
 
         }

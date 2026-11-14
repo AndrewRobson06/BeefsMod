@@ -40,7 +40,7 @@ namespace BeefsMod.Content.Weapons.Magic.Projectiles
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 1;
             Projectile.Size = new Vector2(30);
-            Projectile.scale = 0.7f;
+            Projectile.scale = 0.5f;
 
 
 

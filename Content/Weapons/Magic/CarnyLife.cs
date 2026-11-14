@@ -1,4 +1,5 @@
-﻿using BeefsMod.Content.Weapons.Magic.Projectiles;
+﻿using BeefsMod.Content.Rarities;
+using BeefsMod.Content.Weapons.Magic.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
@@ -16,11 +17,11 @@ namespace BeefsMod.Content.Weapons.Magic
     {
         public override void SetDefaults()
         {
-            Item.width = 50;
-            Item.height = 50;
+            Item.width = 58;
+            Item.height = 58;
 
             Item.DamageType = DamageClass.Magic;
-            Item.damage = 30;
+            Item.damage = 59;
             Item.knockBack = 4f;
 
             Item.useAnimation = 20;
@@ -35,6 +36,7 @@ namespace BeefsMod.Content.Weapons.Magic
 
             Item.shootSpeed = 15f;
             Item.UseSound = SoundID.Item1;
+            Item.rare = ModContent.RarityType<DedicatedItemRarity>();
 
             //SoundEngine.PlaySound(SoundID.Item109);
             Item.shoot = ProjectileID.PurificationPowder; //i dunno why but do this
@@ -43,12 +45,24 @@ namespace BeefsMod.Content.Weapons.Magic
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            SoundEngine.PlaySound(SoundID.Item4 with { Volume = 0.4f });
+            SoundEngine.PlaySound(SoundID.Item4 with { Volume = 0.35f });
 
             Projectile.NewProjectileDirect(source, position, velocity, ModContent.ProjectileType<CarnyLifeProjectile>(), damage, knockback, player.whoAmI);
-            
+
             return false;
         }
+
+        /*public override void MeleeEffects(Player player, Rectangle hitbox)
+        {
+            if (Main.rand.NextBool(20))
+            {
+                int d = Dust.NewDust(player.MountedCenter, hitbox.X, hitbox.Y, DustID.BoneTorch);
+
+                Dust dust = Main.dust[d];
+
+                dust.noGravity = true;
+            }
+        }*/
 
     }
 
@@ -88,7 +102,7 @@ namespace BeefsMod.Content.Weapons.Magic
             // Stores custom hold offsets if needed. Defaults to 0.
             // Cutlass, for example, is held slightly closer to the player.
             // ExampleCustomUseStyleWeapon is included here as an example even though it would default to 0 anyway.
-            public static int[] HandOffsets = ItemID.Sets.Factory.CreateIntSet(0, ModContent.ItemType<CarnyLife>(), -27);
+            public static int[] HandOffsets = ItemID.Sets.Factory.CreateIntSet(0, ModContent.ItemType<CarnyLife>(), -34);
         }
         public class SpinUseStyleGlobalItem : GlobalItem
         {
